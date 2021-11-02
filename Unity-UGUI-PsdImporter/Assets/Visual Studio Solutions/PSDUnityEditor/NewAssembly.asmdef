@@ -1,0 +1,21 @@
+{
+    "name": "NewAssembly",
+    "rootNamespace": "",
+    "references": [
+        "Unity.2D.Psdimporter.Editor",
+        "core",
+        "Unity.TexturePacker.Editor",
+        "Unity.TexturePacker"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fceebd6d8ddb8a443afd3abf7d0de317, type: 3}
+  m_Name: SpriteAtlas
+  m_EditorClassIdentifier: 
+  m_Tag: Assets/AssetBundles/UI/Modules/Home/SpriteAtlas.asset
+  m_Sprites:
+  - {fileID: 1029377622335446309, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 8118310346847763936, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -2591891987307100054, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 2675025071359357398, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 3251819437643933342, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 3139433390254010627, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 179540832364581548, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 4729810388138865065, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 2602378483267755914, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 4482690140880983606, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 7247831830828773882, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 1088401532477870601, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -290400580914478803, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -8397773887234922647, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -4525211366949721540, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -3784427559168844973, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 8770562814034329171, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -4569041632281507929, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -3837925222728495413, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 8185742924567373989, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 1170336075999494647, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -7051737309708808334, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 9195274147933161809, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -1706198071247108091, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_FixedSize: {x: 0, y: 0}
+  m_SizeConstraints: 0
+  m_ForceSquared: 0
+  m_Algorithm: 2
+  m_Sorting: 0
+  m_SortingOrder: 0
+  m_HeuristicsMode: 0
+  m_PackMode: 2
+  m_AlignToGrid: 1
+  m_TrimMode: 0
+  m_TrimMargin: 1
+  m_AlphaThreshold: 1
+  m_TracerTolerance: 200
+  m_Extrude: 1
+  m_BorderPadding: 0
+  m_ShapePadding: 0
+  m_FormatMaxSize: 2048
+  m_Objects:
+  - {fileID: 102900000, guid: beef1034daad0f341bdbd44e4fff979d, type: 3}

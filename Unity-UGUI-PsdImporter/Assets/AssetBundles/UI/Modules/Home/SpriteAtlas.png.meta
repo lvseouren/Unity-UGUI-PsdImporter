@@ -1,0 +1,786 @@
+fileFormatVersion: 2
+guid: 21db2900225841d4fb77d6de70c5ac5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7630978904343436363
+    second: testa
+  - first:
+      213: 1269248664187540063
+    second: testb
+  - first:
+      213: -5649125624616499723
+    second: testc
+  - first:
+      213: 6519543960802840667
+    second: testd
+  - first:
+      213: -4306897111977974791
+    second: teste
+  - first:
+      213: -9205427347378953712
+    second: testf
+  - first:
+      213: -2260485909518168227
+    second: testg
+  - first:
+      213: -7739095087644527557
+    second: testh
+  - first:
+      213: 1604095042740777838
+    second: testi
+  - first:
+      213: 4306873988061256139
+    second: testj
+  - first:
+      213: 5900990396296991463
+    second: testk
+  - first:
+      213: -88840730843928888
+    second: testl
+  - first:
+      213: 2865896080321430664
+    second: testm
+  - first:
+      213: 133537120771657632
+    second: testn
+  - first:
+      213: -4423446739036543201
+    second: testo
+  - first:
+      213: -1677057581127224298
+    second: testp
+  - first:
+      213: 44607538765159704
+    second: testq
+  - first:
+      213: 6712811161391592
+    second: testr
+  - first:
+      213: 2716287797383041974
+    second: tests
+  - first:
+      213: -5521720576336133678
+    second: testt
+  - first:
+      213: 153431812246621683
+    second: testu
+  - first:
+      213: 1029377622335446309
+    second: common_btnt_big_og
+  - first:
+      213: 8118310346847763936
+    second: common_control_btn_yjbgbig
+  - first:
+      213: -2591891987307100054
+    second: common_control_returnt_icon
+  - first:
+      213: 5394863855858584141
+    second: common_head_bg_9S 24 25 24 25
+  - first:
+      213: 3251819437643933342
+    second: common_head_icon_bs
+  - first:
+      213: 3139433390254010627
+    second: common_head_icon_jb
+  - first:
+      213: 179540832364581548
+    second: common_head_icon_ks
+  - first:
+      213: 4729810388138865065
+    second: common_head_icon_ls
+  - first:
+      213: 2602378483267755914
+    second: common_head_icon_mt
+  - first:
+      213: 4482690140880983606
+    second: common_head_icon_st
+  - first:
+      213: -8397773887234922647
+    second: common_pic_popt_title_zsa
+  - first:
+      213: -4525211366949721540
+    second: common_titlebg_bk
+  - first:
+      213: -3784427559168844973
+    second: common_titlebg_bubig
+  - first:
+      213: 8770562814034329171
+    second: common_titlet_picbg_LeftHalf
+  - first:
+      213: -4569041632281507929
+    second: lcuk_icon_cj
+  - first:
+      213: -3837925222728495413
+    second: luck_bg_Texture
+  - first:
+      213: 8185742924567373989
+    second: luck_bottom_gjcj
+  - first:
+      213: 1170336075999494647
+    second: luck_bottom_ptcj
+  - first:
+      213: -7051737309708808334
+    second: luck_icon_zssp
+  - first:
+      213: 9195274147933161809
+    second: luck_titlebg_gj_LeftHalf
+  - first:
+      213: -1706198071247108091
+    second: luck_titlebg_pt_LeftHalf
+  - first:
+      213: 2675025071359357398
+    second: common_head_bg_9S
+  - first:
+      213: 7247831830828773882
+    second: common_head_picx
+  - first:
+      213: 1088401532477870601
+    second: common_head_zjbg
+  - first:
+      213: -290400580914478803
+    second: common_head_zjicon
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 1
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 50
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 1
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: common_btnt_big_og
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 139
+        width: 212
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d5a0f5e75194e00800000000000000
+      internalID: 1029377622335446309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_control_btn_yjbgbig
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 36
+        width: 127
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed3d307f380aa070800000000000000
+      internalID: 8118310346847763936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_control_returnt_icon
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 479
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68016058ffb70cd0800000000000000
+      internalID: -2591891987307100054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_bg_9S
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 570
+        width: 748
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d173a721299f1520800000000000000
+      internalID: 2675025071359357398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_bs
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1904
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e962a76bc88c02d20800000000000000
+      internalID: 3251819437643933342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_jb
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 527
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3013716f802819b20800000000000000
+      internalID: 3139433390254010627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_ks
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 6
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2d4cf8f6bdd7200800000000000000
+      internalID: 179540832364581548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_ls
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 397
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a138f70d79a3a140800000000000000
+      internalID: 4729810388138865065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_mt
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 448
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f5b4a41718d1420800000000000000
+      internalID: 2602378483267755914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_st
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 493
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6365b5dcee6b53e30800000000000000
+      internalID: 4482690140880983606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_picx
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 234
+        width: 6
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1715446a8759460800000000000000
+      internalID: 7247831830828773882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_zjbg
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 181
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902955c5d67ca1f00800000000000000
+      internalID: 1088401532477870601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_zjicon
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 543
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d218604d53a48fbf0800000000000000
+      internalID: -290400580914478803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_pic_popt_title_zsa
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1918
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967af43942d157b80800000000000000
+      internalID: -8397773887234922647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_titlebg_bk
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 100
+        width: 175
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ae663cc383331c0800000000000000
+      internalID: -4525211366949721540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_titlebg_bubig
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1940
+        width: 236
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bda898f230b7bc0800000000000000
+      internalID: -3784427559168844973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_titlet_picbg_LeftHalf
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 621
+        width: 750
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e34c2396c47b970800000000000000
+      internalID: 8770562814034329171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lcuk_icon_cj
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 432
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7c3efd7d08790c0800000000000000
+      internalID: -4569041632281507929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luck_bg_Texture
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 713
+        width: 750
+        height: 1334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce81c81853fcbac0800000000000000
+      internalID: -3837925222728495413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luck_bottom_gjcj
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 285
+        width: 283
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a86189e1d9999170800000000000000
+      internalID: 8185742924567373989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luck_bottom_ptcj
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 279
+        width: 289
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f146cdd57edd3010800000000000000
+      internalID: 1170336075999494647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luck_icon_zssp
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 65
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f007d4742332e90800000000000000
+      internalID: -7051737309708808334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luck_titlebg_gj_LeftHalf
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 217
+        width: 263
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15983ef6e1d2c9f70800000000000000
+      internalID: 9195274147933161809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luck_titlebg_pt_LeftHalf
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1987
+        width: 263
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5080cded4ed5258e0800000000000000
+      internalID: -1706198071247108091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

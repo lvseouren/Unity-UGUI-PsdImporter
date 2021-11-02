@@ -1,0 +1,351 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/AssetBundles/Models/Buildings/AnimRes/AnimResAtlas.tpsheet
+- Assets/AssetBundles/Models/Buildings/AnimRes/College/CollegeAtlas.tpsheet
+- Assets/AssetBundles/Models/Buildings/Base/BaseAtlas.tpsheet
+- Assets/AssetBundles/Models/LandMap/AnimRes/AnimResAtlas.tpsheet
+- Assets/AssetBundles/Models/LandMap/Atlas/AtlasAtlas.tpsheet
+- Assets/AssetBundles/Models/LandMap/MarchSkins/HuangJin/HuangJinAtlas.tpsheet
+- Assets/AssetBundles/Models/LandMap/MarchSkins/Shadow/ShadowAtlas.tpsheet
+- Assets/AssetBundles/Models/LandMap/MarchSkins/Shouren/ShourenAtlas.tpsheet
+- Assets/AssetBundles/Models/Workers/AnimRes/AnimResAtlas.tpsheet
+- Assets/AssetBundles/Tilemap/Runtime/Common/TilemapCommon1Atlas.tpsheet
+- Assets/AssetBundles/Tilemap/Runtime/Common/TilemapCommon3Atlas.tpsheet
+- Assets/AssetBundles/Tilemap/Runtime/Dragon/TilemapDragonAtlas.tpsheet
+- Assets/AssetBundles/Tilemap/Runtime/Dynamic/Monsters/9050/9050Atlas.tpsheet
+- Assets/AssetBundles/Tilemap/Runtime/Dynamic/Monsters/9051/9051Atlas.tpsheet
+- Assets/AssetBundles/Tilemap/Runtime/Pirate/TilemapPirateAtlas.tpsheet
+- Assets/AssetBundles/UI/Global/GlobalAtlas.tpsheet
+- Assets/AssetBundles/UI/Icons/Circle_120x120/All/AllAtlas.tpsheet
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/Badges/BadgesAtlas.tpsheet
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/Heros/HerosAtlas.tpsheet
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/ItemGetWay/ItemGetWayAtlas.tpsheet
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/Soldiers/SoldiersAtlas.tpsheet
+- Assets/AssetBundles/UI/Icons/Low_132x144_132x132/Heros/HerosAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Account/AccountAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/ActivityAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ahzy/ahzyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ccmy/ccmyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/cczdz/cczdzAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/cszb/cszbAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/dailybonus/dailybonusAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/dhsc/dhscAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/djsd/djsdAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/evilInvasion/evilInvasionAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/festivals/festivalsAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/fybk/fybkAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ghwl/ghwlAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/guyu/guyuAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/jingsai/jingsaiAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/jlbk/jlbkAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/jlzz/jlzzAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/KingOfWar/KingOfWarAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/legendTreasure/legendTreasureAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/liuyiertongjie/liuyiertongjieAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/lmbd/lmbdAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/lmzdy/lmzdyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/mrxy/mrxyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/OpenServer/OpenServerAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/PhoneBinding/PhoneBindingAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/qrqd/qrqdAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/RebelQuest/RebelQuestAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/sixking/sixkingAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/sjboss/sjbossAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ssqy/ssqyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/tdxy/tdxyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/treasureMine/treasureMineAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/wgjl/wgjlAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/wzmz/wzmzAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/xyzp/xyzpAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/xzbk/xzbkAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ygmb/ygmbAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ylgw/ylgwAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/yxtz/yxtzAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/zhtx/zhtxAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/zqlz/zqlzAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/zqwg/zqwgAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Appoint/AppointAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Arena/ArenaAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/AttrPartten/AttrParttenAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Awards/AwardsAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Badge/BadgeAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Battle/BattleAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Building/BuildingAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/ChapterTask/ChapterTaskAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Character/CharacterAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Dragon/DragonAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/DragonWar/DragonWarAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Embattle/EmbattleAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Exploration/ExplorationAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/GiftStore/GiftStoreAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/GiftStore/SpriteAtlas/SpriteAtlasAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Goods/GoodsAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Guide/GuideAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Home/SpriteAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Intelligence/IntelligenceAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/ItemEffect/ItemEffectAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/ItemTips/ItemTipsAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/LandMap/LandMapAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Castle/CastleAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Main/MainAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Rally/RallyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Login2/Login2Atlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Lottery/LotteryAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Mail/SpriteAtlas/HeroDetails/HeroDetailsAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Mail/SpriteAtlas/Main/MainAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Multichannel/MultichannelAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/MultiTeamArena/MultiTeamArenaAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/NationalPolicy/NationalPolicyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Navigation/NavigationAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Pirate/PirateAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Player/PlayerAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Prestige/PrestigeAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Quest/QuestAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/RegionRole/RegionRoleAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Royalty/RoyaltyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Rune/RuneAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Sacrifice/SacrificeAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/SbEmoji/SbEmojiAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Shop/ShopAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Skin/SkinAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Soldier/SoldierAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Store/StoreAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Store/StoreBoxAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Technology/TechnologyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Watchtower/WatchtowerAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/WorldTrend/WorldTrendAtlas.tpsheet
+- Assets/AssetBundles/UI/Widgets/ChestPanel/ChestPanelAtlas.tpsheet
+textureFileNames:
+- Assets/AssetBundles/Models/Buildings/AnimRes/AnimResAtlas.png
+- Assets/AssetBundles/Models/Buildings/AnimRes/College/CollegeAtlas.png
+- Assets/AssetBundles/Models/Buildings/Base/BaseAtlas.png
+- Assets/AssetBundles/Models/LandMap/AnimRes/AnimResAtlas.png
+- Assets/AssetBundles/Models/LandMap/Atlas/AtlasAtlas.png
+- Assets/AssetBundles/Models/LandMap/MarchSkins/HuangJin/HuangJinAtlas.png
+- Assets/AssetBundles/Models/LandMap/MarchSkins/Shadow/ShadowAtlas.png
+- Assets/AssetBundles/Models/LandMap/MarchSkins/Shouren/ShourenAtlas.png
+- Assets/AssetBundles/Models/Workers/AnimRes/AnimResAtlas.png
+- Assets/AssetBundles/Tilemap/Runtime/Common/TilemapCommon1Atlas.png
+- Assets/AssetBundles/Tilemap/Runtime/Common/TilemapCommon3Atlas.png
+- Assets/AssetBundles/Tilemap/Runtime/Dragon/TilemapDragonAtlas.png
+- Assets/AssetBundles/Tilemap/Runtime/Dynamic/Monsters/9050/9050Atlas.png
+- Assets/AssetBundles/Tilemap/Runtime/Dynamic/Monsters/9051/9051Atlas.png
+- Assets/AssetBundles/Tilemap/Runtime/Pirate/TilemapPirateAtlas.png
+- Assets/AssetBundles/UI/Global/GlobalAtlas.png
+- Assets/AssetBundles/UI/Icons/Circle_120x120/All/AllAtlas.png
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/Badges/BadgesAtlas.png
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/Heros/HerosAtlas.png
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/ItemGetWay/ItemGetWayAtlas.png
+- Assets/AssetBundles/UI/Icons/High_172x236_172x214/Soldiers/SoldiersAtlas.png
+- Assets/AssetBundles/UI/Icons/Low_132x144_132x132/Heros/HerosAtlas.png
+- Assets/AssetBundles/UI/Modules/Account/AccountAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/ActivityAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ahzy/ahzyAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ccmy/ccmyAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/cczdz/cczdzAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/cszb/cszbAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/dailybonus/dailybonusAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/dhsc/dhscAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/djsd/djsdAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/evilInvasion/evilInvasionAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/festivals/festivalsAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/fybk/fybkAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ghwl/ghwlAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/guyu/guyuAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/jingsai/jingsaiAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/jlbk/jlbkAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/jlzz/jlzzAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/KingOfWar/KingOfWarAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/legendTreasure/legendTreasureAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/liuyiertongjie/liuyiertongjieAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/lmbd/lmbdAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/lmzdy/lmzdyAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/mrxy/mrxyAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/OpenServer/OpenServerAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/PhoneBinding/PhoneBindingAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/qrqd/qrqdAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/RebelQuest/RebelQuestAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/sixking/sixkingAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/sjboss/sjbossAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ssqy/ssqyAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/tdxy/tdxyAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/treasureMine/treasureMineAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/wgjl/wgjlAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/wzmz/wzmzAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/xyzp/xyzpAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/xzbk/xzbkAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ygmb/ygmbAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/ylgw/ylgwAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/yxtz/yxtzAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/zhtx/zhtxAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/zqlz/zqlzAtlas.png
+- Assets/AssetBundles/UI/Modules/Activity/AtlasOfSprite/zqwg/zqwgAtlas.png
+- Assets/AssetBundles/UI/Modules/Appoint/AppointAtlas.png
+- Assets/AssetBundles/UI/Modules/Arena/ArenaAtlas.png
+- Assets/AssetBundles/UI/Modules/AttrPartten/AttrParttenAtlas.png
+- Assets/AssetBundles/UI/Modules/Awards/AwardsAtlas.png
+- Assets/AssetBundles/UI/Modules/Badge/BadgeAtlas.png
+- Assets/AssetBundles/UI/Modules/Battle/BattleAtlas.png
+- Assets/AssetBundles/UI/Modules/Building/BuildingAtlas.png
+- Assets/AssetBundles/UI/Modules/ChapterTask/ChapterTaskAtlas.png
+- Assets/AssetBundles/UI/Modules/Character/CharacterAtlas.png
+- Assets/AssetBundles/UI/Modules/Dragon/DragonAtlas.png
+- Assets/AssetBundles/UI/Modules/DragonWar/DragonWarAtlas.png
+- Assets/AssetBundles/UI/Modules/Embattle/EmbattleAtlas.png
+- Assets/AssetBundles/UI/Modules/Exploration/ExplorationAtlas.png
+- Assets/AssetBundles/UI/Modules/GiftStore/GiftStoreAtlas.png
+- Assets/AssetBundles/UI/Modules/GiftStore/SpriteAtlas/SpriteAtlasAtlas.png
+- Assets/AssetBundles/UI/Modules/Goods/GoodsAtlas.png
+- Assets/AssetBundles/UI/Modules/Guide/GuideAtlas.png
+- Assets/AssetBundles/UI/Modules/Home/SpriteAtlas.png
+- Assets/AssetBundles/UI/Modules/Intelligence/IntelligenceAtlas.png
+- Assets/AssetBundles/UI/Modules/ItemEffect/ItemEffectAtlas.png
+- Assets/AssetBundles/UI/Modules/ItemTips/ItemTipsAtlas.png
+- Assets/AssetBundles/UI/Modules/LandMap/LandMapAtlas.png
+- Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Castle/CastleAtlas.png
+- Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Main/MainAtlas.png
+- Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Rally/RallyAtlas.png
+- Assets/AssetBundles/UI/Modules/Login2/Login2Atlas.png
+- Assets/AssetBundles/UI/Modules/Lottery/LotteryAtlas.png
+- Assets/AssetBundles/UI/Modules/Mail/SpriteAtlas/HeroDetails/HeroDetailsAtlas.png
+- Assets/AssetBundles/UI/Modules/Mail/SpriteAtlas/Main/MainAtlas.png
+- Assets/AssetBundles/UI/Modules/Multichannel/MultichannelAtlas.png
+- Assets/AssetBundles/UI/Modules/MultiTeamArena/MultiTeamArenaAtlas.png
+- Assets/AssetBundles/UI/Modules/NationalPolicy/NationalPolicyAtlas.png
+- Assets/AssetBundles/UI/Modules/Navigation/NavigationAtlas.png
+- Assets/AssetBundles/UI/Modules/Pirate/PirateAtlas.png
+- Assets/AssetBundles/UI/Modules/Player/PlayerAtlas.png
+- Assets/AssetBundles/UI/Modules/Prestige/PrestigeAtlas.png
+- Assets/AssetBundles/UI/Modules/Quest/QuestAtlas.png
+- Assets/AssetBundles/UI/Modules/RegionRole/RegionRoleAtlas.png
+- Assets/AssetBundles/UI/Modules/Royalty/RoyaltyAtlas.png
+- Assets/AssetBundles/UI/Modules/Rune/RuneAtlas.png
+- Assets/AssetBundles/UI/Modules/Sacrifice/SacrificeAtlas.png
+- Assets/AssetBundles/UI/Modules/SbEmoji/SbEmojiAtlas.png
+- Assets/AssetBundles/UI/Modules/Shop/ShopAtlas.png
+- Assets/AssetBundles/UI/Modules/Skin/SkinAtlas.png
+- Assets/AssetBundles/UI/Modules/Soldier/SoldierAtlas.png
+- Assets/AssetBundles/UI/Modules/Store/StoreAtlas.png
+- Assets/AssetBundles/UI/Modules/Store/StoreBoxAtlas.png
+- Assets/AssetBundles/UI/Modules/Technology/TechnologyAtlas.png
+- Assets/AssetBundles/UI/Modules/Watchtower/WatchtowerAtlas.png
+- Assets/AssetBundles/UI/Modules/WorldTrend/WorldTrendAtlas.png
+- Assets/AssetBundles/UI/Widgets/ChestPanel/ChestPanelAtlas.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

@@ -1,0 +1,38 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4ed56af0619fab6a8d2f25368269c2b9:3c76a305188ce2d31a72d7ec8556757e:ec3fb199b0508cab7b84c5248fec6def$
+#
+:format=40300
+:texture=SpriteAtlas.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=enabled
+
+common_btnt_big_og;1;139;212;76; 0.5;0.5; 0;0;0;0
+common_control_btn_yjbgbig;1;36;127;62; 0.5;0.5; 0;0;0;0
+common_control_returnt_icon;577;479;89;89; 0.5;0.5; 0;0;0;0
+common_head_bg_9S;1;570;748;49; 0.5;0.5; 0;0;0;0
+common_head_icon_bs;753;1904;34;34; 0.5;0.5; 0;0;0;0
+common_head_icon_jb;668;527;37;41; 0.5;0.5; 0;0;0;0
+common_head_icon_ks;1;6;31;28; 0.5;0.5; 0;0;0;0
+common_head_icon_ls;577;397;25;33; 0.5;0.5; 0;0;0;0
+common_head_icon_mt;625;448;27;29; 0.5;0.5; 0;0;0;0
+common_head_icon_st;668;493;23;32; 0.5;0.5; 0;0;0;0
+common_head_picx;266;234;6;43; 0.5;0.5; 0;0;0;0
+common_head_zjbg;215;181;34;34; 0.5;0.5; 0;0;0;0
+common_head_zjicon;707;543;25;25; 0.5;0.5; 0;0;0;0
+common_pic_popt_title_zsa;789;1918;26;20; 0.5;0.5; 0;0;0;0
+common_titlebg_bk;1;100;175;37; 0.5;0.5; 0;0;0;0
+common_titlebg_bubig;753;1940;236;45; 0.5;0.5; 0;0;0;0
+common_titlet_picbg_LeftHalf;1;621;750;90; 0.5;0.5; 0;0;0;0
+lcuk_icon_cj;577;432;46;45; 0.5;0.5; 0;0;0;0
+luck_bg_Texture;1;713;750;1334; 0.5;0.5; 0;0;0;0
+luck_bottom_gjcj;292;285;283;283; 0.5;0.5; 0;0;0;0
+luck_bottom_ptcj;1;279;289;289; 0.5;0.5; 0;0;0;0
+luck_icon_zssp;130;65;33;33; 0.5;0.5; 0;0;0;0
+luck_titlebg_gj_LeftHalf;1;217;263;60; 0.5;0.5; 0;0;0;0
+luck_titlebg_pt_LeftHalf;753;1987;263;60; 0.5;0.5; 0;0;0;0
