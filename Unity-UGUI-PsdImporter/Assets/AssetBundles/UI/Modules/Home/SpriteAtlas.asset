@@ -16,6 +16,7 @@ MonoBehaviour:
   m_Sprites:
   - {fileID: -8649055461777433733, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 1029377622335446309, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 8118310346847763936, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: -2591891987307100054, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 2675025071359357398, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 3251819437643933342, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
@@ -31,6 +32,8 @@ MonoBehaviour:
   - {fileID: -8397773887234922647, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 8061963655120646824, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 1617678753470712887, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -4525211366949721540, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -3784427559168844973, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 8770562814034329171, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 3508799883687167381, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 7270187986156529614, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
@@ -49,6 +52,13 @@ MonoBehaviour:
   - {fileID: -8463408263706232915, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 6195287590837794011, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   - {fileID: 8286143290703663735, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -4569041632281507929, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -3837925222728495413, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 8185742924567373989, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 1170336075999494647, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -7051737309708808334, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: 9195274147933161809, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
+  - {fileID: -1706198071247108091, guid: 21db2900225841d4fb77d6de70c5ac5b, type: 3}
   m_MaxSize: {x: 2048, y: 2048}
   m_FixedSize: {x: 0, y: 0}
   m_SizeConstraints: 0
