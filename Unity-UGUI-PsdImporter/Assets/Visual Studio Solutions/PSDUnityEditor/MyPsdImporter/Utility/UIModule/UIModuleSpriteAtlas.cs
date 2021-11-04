@@ -98,6 +98,7 @@ namespace PG
                 objects.Add(sprite);
             
             spriteAtlas.Objects = objects.ToArray();
+            spriteAtlas.RefreshDict();
         }
 
         public static string[] FindAtlasFolder(string path, HashSet<Sprite> sprites)
