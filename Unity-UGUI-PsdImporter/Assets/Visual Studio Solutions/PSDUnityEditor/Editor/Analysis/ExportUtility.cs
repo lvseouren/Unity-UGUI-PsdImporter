@@ -509,8 +509,8 @@ namespace PSDUnity.Analysis
             var clipTop = Math.Max(layer.Top, canvasRect.top);
             var clipBot = Math.Min(layer.Bottom, canvasRect.bottom);
 
-            if(clipTop > canvasRect.bottom || clipBot < canvasRect.top)//顶部已经在画布外，说明完全不可见了
-                return new Texture2D(layer.Width, layer.Height);
+            if (clipTop > canvasRect.bottom || clipBot < canvasRect.top)//顶部已经在画布外，说明完全不可见了
+                return null;
             if (clipLeft > layer.Left || clipRight < layer.Right || clipTop < layer.Top || clipBot > layer.Bottom)
             {
                 Debug.Log("触发裁剪！");

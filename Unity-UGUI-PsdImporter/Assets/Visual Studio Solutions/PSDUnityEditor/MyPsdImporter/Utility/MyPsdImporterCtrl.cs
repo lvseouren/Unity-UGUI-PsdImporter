@@ -198,13 +198,16 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             if (!root.IsGroup)
             {
                 node.image = ExportUtility.GenerateLayerImgNode(root, node, true);
-                if (!imgDict.ContainsKey(node.name))
-                    imgDict.Add(node.name, node);
-                else
+                if (node.image.texture != null)
                 {
-                    var preNode = imgDict[node.name];
-                    if (node.image.IsBigger(preNode.image))
-                        imgDict[node.name] = node;
+                    if (!imgDict.ContainsKey(node.name))
+                        imgDict.Add(node.name, node);
+                    else
+                    {
+                        var preNode = imgDict[node.name];
+                        if (node.image.IsBigger(preNode.image))
+                            imgDict[node.name] = node;
+                    }
                 }
             }
             foreach (var layer in root.Childs)
