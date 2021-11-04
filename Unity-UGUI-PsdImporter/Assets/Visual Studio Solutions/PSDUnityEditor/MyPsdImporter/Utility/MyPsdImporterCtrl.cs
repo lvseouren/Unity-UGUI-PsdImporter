@@ -24,6 +24,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         Dictionary<string, PsdLayerNode> imgDict;
         string moduleName;
         private string psdName;
+        private static Vector2 rootSize { get; set; }
 
         public static MyPsdImporterCtrl Instance
         {
@@ -35,8 +36,9 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             }
         }
 
-        public void InitEnvironment(string psdPath)
+        public void InitEnvironment(string psdPath, Vector2 size)
         {
+            rootSize = size;
             string[] data = psdPath.Split('/');
             var index = Array.FindIndex(data, x => x == "Modules");
             moduleName = data[index + 1];
@@ -144,7 +146,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 if(texture)
                 {
                     // Need to load the image first
-                    byte[] buf = ExportUtility.EncordToPng(texture);
+                    byte[] buf = EncordToPng(texture);
                     var atlasRoot = GetAtlasFolderPath();
                     if(!Directory.Exists(atlasRoot))
                         Directory.CreateDirectory(atlasRoot);
@@ -177,6 +179,33 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             //ProcessAtlas(null);
         }
 
+        /// <summary>
+        /// 兼容unity2017和unity5.6
+        /// </summary>
+        /// <param name="texture"></param>
+        /// <returns></returns>
+        public static byte[] EncordToPng(Texture2D texture)
+        {
+            try
+            {
+                var assemble = System.Reflection.Assembly.Load("UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
+                if (assemble != null)
+                {
+                    var imageConvention = assemble.GetType("UnityEngine.ImageConversion");
+                    if (imageConvention != null)
+                    {
+                        return imageConvention.GetMethod("EncodeToPNG", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.InvokeMethod).Invoke(null, new object[] { texture }) as byte[];
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return texture.GetType().GetMethod("EncodeToPNG").Invoke(texture, null) as byte[];
+            }
+
+            return new byte[0];
+        }
+
         public void ProcessAtlas(string moduleName)
         {
             if (string.IsNullOrEmpty(moduleName))
@@ -197,7 +226,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             PsdLayerNode node = new PsdLayerNode(root);
             if (!root.IsGroup)
             {
-                node.image = ExportUtility.GenerateLayerImgNode(root, node, true);
+                node.image = GenerateLayerImgNode(root, node, true);
                 if (node.image.texture != null)
                 {
                     if (!imgDict.ContainsKey(node.name))
@@ -217,14 +246,6 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             return node;
         }
 
-        //get layer's untransparent pixel rect(相对于图层原来的rect数据）
-        public static Rect GetRectFromLayer(IPsdLayer psdLayer)
-        {
-            Rect ret = new Rect();
-
-            return ret;
-        }
-
         public string GetRegularName(string name)
         {
             var splitCharIndex = name.IndexOf('@');
@@ -236,6 +257,206 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             if (splitCharIndex >= 0)
                 name = name.Substring(0, splitCharIndex);
             return name;
+        }
+
+        public static ImgNode GenerateLayerImgNode(PsdLayer layer, PsdLayerNode node, bool forceSprite = false)
+        {
+            ImgNode data = null;
+            var canvasRect = new MyRect(0, rootSize.x, 0, rootSize.y);
+            var texture = CreateClipTexture(layer, canvasRect, out Rect clipRect);
+            var rect = clipRect;
+            node.SetRect(rect);
+            switch (layer.LayerType)
+            {
+                case LayerType.Normal:
+                    data = new ImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(null, layer.Name);
+                    break;
+                case LayerType.Color:
+                    if (forceSprite)
+                    {
+                        data = new ImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(null, layer.Name);
+                    }
+                    else
+                    {
+                        data = new ImgNode(layer.Name, rect, GetLayerColor(layer)).SetIndex(CalcuteLayerID(layer));
+                    }
+                    break;
+                case LayerType.Text:
+                    var textInfo = layer.Records.TextInfo;
+                    var color = new Color(textInfo.color[0], textInfo.color[1], textInfo.color[2], textInfo.color[3]);
+                    data = new ImgNode(layer.Name, rect, textInfo.fontName, textInfo.fontSize, textInfo.text, color);
+                    break;
+                case LayerType.Complex:
+                    data = new ImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(null, layer.Name);
+                    break;
+                default:
+                    break;
+            }
+            if (data != null)
+                data.color.a *= layer.Opacity;
+            return data;
+        }
+
+        /// <summary>
+        /// 计算平均颜色
+        /// </summary>
+        /// <param name="layer"></param>
+        /// <returns></returns>
+        public static Color GetLayerColor(PsdLayer layer)
+        {
+            Channel red = Array.Find(layer.Channels, i => i.Type == ChannelType.Red);
+            Channel green = Array.Find(layer.Channels, i => i.Type == ChannelType.Green);
+            Channel blue = Array.Find(layer.Channels, i => i.Type == ChannelType.Blue);
+            Channel alpha = Array.Find(layer.Channels, i => i.Type == ChannelType.Alpha);
+            //Channel mask = Array.Find(layer.Channels, i => i.Type == ChannelType.Mask);
+
+            Color[] pixels = new Color[layer.Width * layer.Height];
+
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                byte r = red.Data[i];
+                byte g = green.Data[i];
+                byte b = blue.Data[i];
+                byte a = 255;
+
+                if (alpha != null && alpha.Data[i] != 0)
+                    a = (byte)alpha.Data[i];
+                //if (mask != null && mask.Data[i] != 0)
+                //    a *= mask.Data[i];
+
+                int mod = i % layer.Width;
+                int n = ((layer.Width - mod - 1) + i) - mod;
+                pixels[pixels.Length - n - 1] = new Color(r / 255f, g / 255f, b / 255f, a / 255f);
+            }
+            Color color = Color.white;
+            foreach (var item in pixels)
+            {
+                color += item;
+                color *= 0.5f;
+            }
+            return color;
+        }
+
+        private static int CalcuteLayerID(PsdLayer layer)
+        {
+            int id = 0;
+            var parent = layer.Parent;
+            if (parent != null)
+            {
+                id = Array.IndexOf(parent.Childs, layer);
+                id += 10 * CalcuteLayerID(parent);
+            }
+            else
+            {
+                id = Array.IndexOf(layer.Document.Childs, layer);
+            }
+            return id;
+        }
+
+        //将画布之外的像素裁剪掉
+        public static Texture2D CreateClipTexture(PsdLayer layer, MyRect canvasRect, out Rect clipRect)
+        {
+            clipRect = new Rect();
+            Debug.Assert(layer.Width != 0 && layer.Height != 0, layer.Name + ": width = height = 0");
+            if (layer.Width == 0 || layer.Height == 0) return new Texture2D(layer.Width, layer.Height);
+            var clipLeft = Math.Max(layer.Left, canvasRect.left);
+            var clipRight = Math.Min(layer.Right, canvasRect.right);
+            var clipTop = Math.Max(layer.Top, canvasRect.top);
+            var clipBot = Math.Min(layer.Bottom, canvasRect.bottom);
+
+            if (clipTop > canvasRect.bottom || clipBot < canvasRect.top)//顶部已经在画布外，说明完全不可见了
+                return null;
+            if (clipLeft > layer.Left || clipRight < layer.Right || clipTop < layer.Top || clipBot > layer.Bottom)
+            {
+                Debug.Log("触发裁剪！");
+            }
+            GetRectFromLRTB(clipLeft, clipRight, clipTop, clipBot, out clipRect);
+
+            int clipWidth = Math.Abs((int)(clipRight - clipLeft));
+            int clipHeight = Math.Abs((int)(clipTop - clipBot));
+            Texture2D texture = new Texture2D(clipWidth, clipHeight);
+            Color32[] pixels = new Color32[clipWidth * clipHeight];
+
+            Channel red = Array.Find(layer.Channels, i => i.Type == ChannelType.Red);
+            Channel green = Array.Find(layer.Channels, i => i.Type == ChannelType.Green);
+            Channel blue = Array.Find(layer.Channels, i => i.Type == ChannelType.Blue);
+            Channel alpha = Array.Find(layer.Channels, i => i.Type == ChannelType.Alpha);
+
+            layer.GetGradientColor(out Color32[] gradientColors, out int angle, out bool hasGradient);
+
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                //row,col:pixel-i 对应的texture2D的像素坐标值
+                int row = i / clipWidth;
+                int col = i % clipWidth;
+                //mapRow, mapCol:原rect中的行列值（从下往上，从左往右）
+                int mapRow = (int)(clipBot - layer.Top) - row - 1;
+                int mapCol = col + (int)(clipLeft - layer.Left);
+
+                var mapIndex = mapRow * layer.Width + mapCol;
+                var redErr = red == null || red.Data == null || red.Data.Length <= mapIndex;
+                var greenErr = green == null || green.Data == null || green.Data.Length <= mapIndex;
+                var blueErr = blue == null || blue.Data == null || blue.Data.Length <= mapIndex;
+                var alphaErr = alpha == null || alpha.Data == null || alpha.Data.Length <= mapIndex;
+
+                if (mapIndex < 0 || mapIndex >= red.Data.Length)
+                    Debug.Log("WTF");
+                byte r = redErr ? (byte)0 : red.Data[mapIndex];
+                byte g = greenErr ? (byte)0 : green.Data[mapIndex];
+                byte b = blueErr ? (byte)0 : blue.Data[mapIndex];
+                byte a = alphaErr ? (byte)255 : alpha.Data[mapIndex];
+                if (hasGradient)
+                {
+                    Color32 color = GetGradientColor(gradientColors, layer.Width, layer.Height, mapRow, mapCol, angle);
+                    r = color.r;
+                    g = color.g;
+                    b = color.b;
+                }
+
+                pixels[i] = new Color32(r, g, b, a);
+            }
+
+            texture.SetPixels32(pixels);
+            texture.Apply();
+            return texture;
+        }
+
+        public static Color32 GetGradientColor(Color32[] colors, int width, int height, int row, int col, int angle)
+        {
+            Color32 output = new Color32(colors[0].r, colors[0].g, colors[0].b, colors[0].a);
+            float factor = (row + 1) * 1.0f / height;
+            var c0 = colors[0].r;
+            var c1 = colors[1].r;
+            output.r = Convert.ToByte((int)c0 + (Math.Floor((c1 - c0) * factor)));
+            c0 = colors[0].g;
+            c1 = colors[1].g;
+            output.g = Convert.ToByte((int)c0 + (Math.Floor((c1 - c0) * factor)));
+            c0 = colors[0].b;
+            c1 = colors[1].b;
+            output.b = Convert.ToByte((int)c0 + (Math.Floor((c1 - c0) * factor)));
+            return output;
+        }
+
+        public static Rect GetRectFromLayer(IPsdLayer psdLayer)
+        {
+            //rootSize = new Vector2(rootSize.x > maxSize.x ? maxSize.x : rootSize.x, rootSize.y > maxSize.y ? maxSize.y : rootSize.y);
+            var left = psdLayer.Left;// psdLayer.Left <= 0 ? 0 : psdLayer.Left;
+            var bottom = psdLayer.Bottom;// psdLayer.Bottom <= 0 ? 0 : psdLayer.Bottom;
+            var top = psdLayer.Top;// psdLayer.Top >= rootSize.y ? rootSize.y : psdLayer.Top;
+            var right = psdLayer.Right;// psdLayer.Right >= rootSize.x ? rootSize.x : psdLayer.Right;
+
+            GetRectFromLRTB(left, right, top, bottom, out Rect rect);
+            return rect;
+        }
+
+        public static void GetRectFromLRTB(int left, int right, int top, int bottom, out Rect rect)
+        {
+            var width = right - left;// psdLayer.Width > rootSize.x ? rootSize.x : psdLayer.Width;
+            var height = bottom - top;// psdLayer.Height > rootSize.y ? rootSize.y : psdLayer.Height;
+
+            var xMin = (right + left - rootSize.x) * 0.5f;
+            var yMin = -(top + bottom - rootSize.y) * 0.5f;
+            rect = new Rect(xMin, yMin, width, height);
         }
     }
 }

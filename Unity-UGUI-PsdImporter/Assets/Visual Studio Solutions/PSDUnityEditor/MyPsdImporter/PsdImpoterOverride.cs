@@ -50,10 +50,10 @@ public class PsdImpoterOverride : PSDImporter
         yield return new WaitForEndOfFrame();
         var canvas = GetCanvas();
 
-        MyPsdImporterCtrl.Instance.InitEnvironment(assetPath);
-        MyPsdImporterCtrl.Instance.uiRoot = canvas.transform;
         var psd = PsdDocument.Create(assetPath);
-        ExportUtility.InitPsdExportEnvrioment(null, new Vector2(psd.Width, psd.Height));
+        MyPsdImporterCtrl.Instance.InitEnvironment(assetPath, new Vector2(psd.Width, psd.Height));
+
+        MyPsdImporterCtrl.Instance.uiRoot = canvas.transform;
         var root = MyPsdImporterCtrl.Instance.PreParsePsdLayers(psd);
         //root.Draw(canvas.transform);
         EditorCoroutines.Execute(PostProcessPsdImported(MyPsdImporterCtrl.Instance.GetModuleName(), root, MyPsdImporterCtrl.Instance.GetPsdName()));
