@@ -426,6 +426,8 @@ namespace PSDUnity.Analysis
                 default:
                     break;
             }
+            if (data != null)
+                data.color.a *= layer.Opacity;
             return data;
         }
 
@@ -502,12 +504,14 @@ namespace PSDUnity.Analysis
             clipRect = new Rect();
             Debug.Assert(layer.Width != 0 && layer.Height != 0, layer.Name + ": width = height = 0");
             if (layer.Width == 0 || layer.Height == 0) return new Texture2D(layer.Width, layer.Height);
-
             var clipLeft = Math.Max(layer.Left, canvasRect.left);
             var clipRight = Math.Min(layer.Right, canvasRect.right);
             var clipTop = Math.Max(layer.Top, canvasRect.top);
             var clipBot = Math.Min(layer.Bottom, canvasRect.bottom);
-            if(clipLeft > layer.Left || clipRight < layer.Right || clipTop < layer.Top || clipBot > layer.Bottom)
+
+            if(clipTop > canvasRect.bottom || clipBot < canvasRect.top)//顶部已经在画布外，说明完全不可见了
+                return new Texture2D(layer.Width, layer.Height);
+            if (clipLeft > layer.Left || clipRight < layer.Right || clipTop < layer.Top || clipBot > layer.Bottom)
             {
                 Debug.Log("触发裁剪！");
             }
@@ -540,15 +544,18 @@ namespace PSDUnity.Analysis
                 var blueErr = blue == null || blue.Data == null || blue.Data.Length <= mapIndex;
                 var alphaErr = alpha == null || alpha.Data == null || alpha.Data.Length <= mapIndex;
 
+                if (mapIndex < 0 || mapIndex >= red.Data.Length)
+                    Debug.Log("WTF");
                 byte r = redErr ? (byte)0 : red.Data[mapIndex];
                 byte g = greenErr ? (byte)0 : green.Data[mapIndex];
                 byte b = blueErr ? (byte)0 : blue.Data[mapIndex];
                 byte a = alphaErr ? (byte)255 : alpha.Data[mapIndex];
                 if(hasGradient)
                 {
-                    r = gradientColors[0].r;
-                    g = gradientColors[0].g;
-                    b = gradientColors[0].b;
+                    Color32 color = GetGradientColor(gradientColors, layer.Width, layer.Height, mapRow, mapCol, angle);
+                    r = color.r;
+                    g = color.g;
+                    b = color.b;
                 }
 
                 pixels[i] = new Color32(r, g, b, a);
@@ -557,6 +564,22 @@ namespace PSDUnity.Analysis
             texture.SetPixels32(pixels);
             texture.Apply();
             return texture;
+        }
+
+        public static Color32 GetGradientColor(Color32[] colors, int width, int height, int row, int col, int angle)
+        {
+            Color32 output = new Color32(colors[0].r, colors[0].g, colors[0].b, colors[0].a);
+            float factor = (row + 1)*1.0f / height;
+            var c0 = colors[0].r;
+            var c1 = colors[1].r;
+            output.r = Convert.ToByte((int)c0 + (Math.Floor((c1 - c0) * factor)));
+            c0 = colors[0].g;
+            c1 = colors[1].g;
+            output.g = Convert.ToByte((int)c0 + (Math.Floor((c1 - c0) * factor)));
+            c0 = colors[0].b;
+            c1 = colors[1].b;
+            output.b = Convert.ToByte((int)c0 + (Math.Floor((c1 - c0) * factor)));
+            return output;
         }
 
         /// <summary>
