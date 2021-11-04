@@ -56,9 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\cn.pantheongames.texturepacker\Runtime\SpriteAtlasManager.cs" />
-    <Compile Include="Packages\cn.pantheongames.texturepacker\Runtime\SpriteAtlas.cs" />
     <Compile Include="Packages\cn.pantheongames.texturepacker\Runtime\SpriteAtlasEnums.cs" />
+    <Compile Include="Packages\cn.pantheongames.texturepacker\Runtime\SpriteAtlas.cs" />
+    <Compile Include="Packages\cn.pantheongames.texturepacker\Runtime\SpriteAtlasManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\cn.pantheongames.texturepacker\Runtime\Unity.TexturePacker.asmdef" />
@@ -307,6 +307,9 @@
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets\codeandweb.com\Editor\TexturePackerImporter.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -315,9 +318,6 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="TexturePackerImporter">
-      <HintPath>Assets\codeandweb.com\Editor\TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Program Files\Unity2019.3.0f1\Editor\2020.3.19f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

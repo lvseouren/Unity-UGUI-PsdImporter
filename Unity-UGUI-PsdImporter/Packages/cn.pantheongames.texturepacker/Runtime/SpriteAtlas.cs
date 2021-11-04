@@ -242,6 +242,12 @@ namespace PantheonGames.TexturePacker
             if (m_FixedSize.y < 0)
                 m_FixedSize.y = 0;
         }
+
+        public void RefreshDict()
+        {
+            m_SpriteDic = null;
+            OnEnable();
+        }
 #endif
     }
 }

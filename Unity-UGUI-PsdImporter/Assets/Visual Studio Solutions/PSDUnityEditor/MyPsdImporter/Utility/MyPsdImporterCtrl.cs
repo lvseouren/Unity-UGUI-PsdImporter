@@ -23,6 +23,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         internal Transform uiRoot;
         Dictionary<string, PsdLayerNode> imgDict;
         string moduleName;
+        private string psdName;
 
         public static MyPsdImporterCtrl Instance
         {
@@ -39,7 +40,15 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             string[] data = psdPath.Split('/');
             var index = Array.FindIndex(data, x => x == "Modules");
             moduleName = data[index + 1];
+            psdName = data[index + 3];
+            psdName = psdName.Split('.')[0];
         }
+
+        internal string GetPrefabPath(string psdName)
+        {
+            return GetPrefabFolderPath() + "/" + psdName + ".prefab";
+        }
+
         public PsdLayerNode PreParsePsdLayers(PsdDocument psd)
         {
             if (imgDict == null)
@@ -65,6 +74,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         string GetAtlasFolderPath()
         {
             return GetModulePath() + "/Atlas";
+        }
+
+        string GetPrefabFolderPath()
+        {
+            return GetModulePath() + "/Prefabs";
         }
 
         Sprite GetSprite(string name)
@@ -93,6 +107,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 sprite = globalAtlas?.GetSprite(name);
             }
             return sprite;
+        }
+
+        internal string GetPsdName()
+        {
+            return psdName;
         }
 
         internal void RefreshImageSprite(PsdLayerNode root)

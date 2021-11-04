@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 647eac6a9e5374e458c25ba2f9c5683d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7457207661811171201
+    second: hero_tabt_bgcse_9S:4:4:4:24@Global
+  - first:
+      213: 2429210320904525780
+    second: hero_tabt_bgtiao_9S:1@Global
+  - first:
+      213: -1064560420569793053
+    second: hero_tabt_bgty@Global
+  - first:
+      213: 287341790166496030
+    second: hero_tabt_bgxz@Global
+  - first:
+      213: 3599300426152952448
+    second: hero_lb_toptitle_bg@Global
+  - first:
+      213: -4712959887225736467
+    second: common_titlet_picbg_LeftHalf@Global
+  - first:
+      213: -5388941283255934467
+    second: common_control_returnt_icon@Global
+  - first:
+      213: 1812468456460737844
+    second: common_pic_popt_title_zsa@Global
+  - first:
+      213: -82986029396118078
+    second: hero_ck_bottom1_bg_9S:4:47:4:47@Common
+  - first:
+      213: 7270187986156529614
+    second: hero_lb_bottom1_bgx
+  - first:
+      213: -7154230685149769653
+    second: common_btnt_big_og@Global
+  - first:
+      213: -1055269347805256238
+    second: hero_lb_xinbg
+  - first:
+      213: 5803023761101993447
+    second: common_tipsspot@Global
+  - first:
+      213: -7848073361030720256
+    second: item_propk_bg_og@Global
+  - first:
+      213: 2259687975578190052
+    second: commom_jineng_icon1@Global
+  - first:
+      213: 4443271037589485197
+    second: item_propk_bg_nuber@Global
+  - first:
+      213: 6257535054907791439
+    second: item_propk_bg_rd@Global
+  - first:
+      213: -5898610923599641121
+    second: item_propk_bg_pl@Global
+  - first:
+      213: -4210306414817933878
+    second: item_propk_bg_bu@Global
+  - first:
+      213: -1097215367227147389
+    second: item_propk_bg_wt@Global
+  - first:
+      213: 7537544581011055841
+    second: item_jineng_icon1@Global
+  - first:
+      213: -2248974863364725310
+    second: item_propk_bg_gn@Global
+  - first:
+      213: 6247601083852328053
+    second: home_upgrade_icon_bg@Global
+  - first:
+      213: 8755513789287131857
+    second: common_icon_chakan@Global
+  - first:
+      213: -2869243887765761388
+    second: common_pic_titlehw3@Global
+  - first:
+      213: -2833481818112450573
+    second: common_head_bg_9S:24:25:24:25@Global
+  - first:
+      213: -3486475457670028729
+    second: common_head_icon_ks@Global
+  - first:
+      213: -8176545180588719005
+    second: common_head_icon_ls@Global
+  - first:
+      213: 7573400761760050847
+    second: common_head_icon_mt@Global
+  - first:
+      213: 8897434409923791542
+    second: common_head_icon_st@Global
+  - first:
+      213: 5342738965360423366
+    second: common_head_icon_jb@Global
+  - first:
+      213: -4911857458446771942
+    second: common_head_icon_bs@Global
+  - first:
+      213: -6495245013128788888
+    second: common_head_picx@Global
+  - first:
+      213: -3779173299823929980
+    second: common_head_zjbg@Global
+  - first:
+      213: -6975761799121896321
+    second: common_head_zjicon@Global
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hero_tabt_bgcse_9S:4:4:4:24@Global
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 605
+        width: 750
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f7392cbd25d7760800000000000000
+      internalID: 7457207661811171201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgtiao_9S:1@Global
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 745
+        width: 750
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d71a369ae946b120800000000000000
+      internalID: 2429210320904525780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgty@Global
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 327
+        width: 186
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed3ff110fbe931f0800000000000000
+      internalID: -1064560420569793053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgxz@Global
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 423
+        width: 181
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13bff3f5d7dcf300800000000000000
+      internalID: 287341790166496030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_lb_toptitle_bg@Global
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 515
+        width: 750
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08242cceaa843f130800000000000000
+      internalID: 3599300426152952448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_titlet_picbg_LeftHalf@Global
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 423
+        width: 750
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2be31f3f3389eb0800000000000000
+      internalID: -4712959887225736467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_control_returnt_icon@Global
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 78
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1a7186472a635b0800000000000000
+      internalID: -5388941283255934467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_pic_popt_title_zsa@Global
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 304
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d51f1557e272910800000000000000
+      internalID: 1812468456460737844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_ck_bottom1_bg_9S:4:47:4:47@Common
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 327
+        width: 750
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5368c55ac29def0800000000000000
+      internalID: -82986029396118078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_lb_bottom1_bgx
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 752
+        width: 750
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec72c2d4475e4e460800000000000000
+      internalID: 7270187986156529614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_btnt_big_og@Global
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 0
+        width: 212
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40d27ab81117bc90800000000000000
+      internalID: -7154230685149769653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_lb_xinbg
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 169
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5a5b58e1eea51f0800000000000000
+      internalID: -1055269347805256238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_tipsspot@Global
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 300
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5b2af6d5b788050800000000000000
+      internalID: 5803023761101993447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_og@Global
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 152
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005de88ebda061390800000000000000
+      internalID: -7848073361030720256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: commom_jineng_icon1@Global
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 205
+        width: 106
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e04f8fcd360c5f10800000000000000
+      internalID: 2259687975578190052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_nuber@Global
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 253
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d867d4c977ba9ad30800000000000000
+      internalID: 4443271037589485197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_rd@Global
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4855558afa37d650800000000000000
+      internalID: 6257535054907791439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_pl@Global
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 152
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5ca9efd9ce32ea0800000000000000
+      internalID: -5898610923599641121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_bu@Global
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac58a357f9cf195c0800000000000000
+      internalID: -4210306414817933878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_wt@Global
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 152
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b7352df68e5c0f0800000000000000
+      internalID: -1097215367227147389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_jineng_icon1@Global
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 78
+        width: 108
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4a5dd5cdcba9860800000000000000
+      internalID: 7537544581011055841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_gn@Global
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5ec5007490ac0e0800000000000000
+      internalID: -2248974863364725310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_upgrade_icon_bg@Global
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 253
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c0d55a510f3b650800000000000000
+      internalID: 6247601083852328053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_icon_chakan@Global
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 114
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da6e741765d18970800000000000000
+      internalID: 8755513789287131857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_pic_titlehw3@Global
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492d2cfc2e56e28d0800000000000000
+      internalID: -2869243887765761388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_bg_9S:24:25:24:25@Global
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 694
+        width: 748
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff11e18c437da8d0800000000000000
+      internalID: -2833481818112450573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_ks@Global
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 169
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742e57b1b0d8d9fc0800000000000000
+      internalID: -3486475457670028729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_ls@Global
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 0
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364c31dba73178e80800000000000000
+      internalID: -8176545180588719005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_mt@Global
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 35
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e61620edf1a1960800000000000000
+      internalID: 7573400761760050847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_st@Global
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 286
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba48d784790a7b70800000000000000
+      internalID: 8897434409923791542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_jb@Global
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 199
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c132fd28c8352a40800000000000000
+      internalID: 5342738965360423366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_icon_bs@Global
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 286
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a195de96aa395dbb0800000000000000
+      internalID: -4911857458446771942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_picx@Global
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 327
+        width: 6
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864c457e2114cd5a0800000000000000
+      internalID: -6495245013128788888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_zjbg@Global
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 78
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4859a5f18edad8bc0800000000000000
+      internalID: -3779173299823929980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_head_zjicon@Global
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 300
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c79955a9d113f90800000000000000
+      internalID: -6975761799121896321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

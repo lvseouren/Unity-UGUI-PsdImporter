@@ -16,14 +16,24 @@ using MogulTech.Utilities;
 [ScriptedImporter(1, null, new[] { "psd" })]
 public class PsdImpoterOverride : PSDImporter
 {
-    static IEnumerator PostProcessPsdImported(string moduleName, PsdLayerNode root)
+    static IEnumerator PostProcessPsdImported(string moduleName, PsdLayerNode root, string psdName)
     {
         yield return new WaitForEndOfFrame();
         Debug.Log(moduleName);
         AssetDatabase.Refresh(); 
         MyPsdImporterCtrl.Instance.ProcessAtlas(moduleName);
         MyPsdImporterCtrl.Instance.RefreshImageSprite(root);
-        root.Draw(GetCanvas()?.transform);
+        
+        GameObject source = AssetDatabase.LoadAssetAtPath("Assets/AssetBundles/UI/Modules/Global/Prefabs/FullPanel.prefab", typeof(GameObject)) as GameObject;
+        GameObject objSource = (GameObject)PrefabUtility.InstantiatePrefab(source);
+        objSource.transform.SetParent(MyPsdImporterCtrl.Instance.uiRoot);
+        objSource.transform.localPosition = Vector3.zero;
+
+        Transform contentNode = objSource.transform.Find("content");
+        root.Draw(contentNode);
+
+        string variantAssetPath = MyPsdImporterCtrl.Instance.GetPrefabPath(psdName);
+        GameObject obj = PrefabUtility.SaveAsPrefabAsset(objSource, variantAssetPath);
     }
 
     const string exporterPath = "Assets/Test/expoter.asset";
@@ -46,7 +56,7 @@ public class PsdImpoterOverride : PSDImporter
         ExportUtility.InitPsdExportEnvrioment(null, new Vector2(psd.Width, psd.Height));
         var root = MyPsdImporterCtrl.Instance.PreParsePsdLayers(psd);
         //root.Draw(canvas.transform);
-        EditorCoroutines.Execute(PostProcessPsdImported(MyPsdImporterCtrl.Instance.GetModuleName(), root));
+        EditorCoroutines.Execute(PostProcessPsdImported(MyPsdImporterCtrl.Instance.GetModuleName(), root, MyPsdImporterCtrl.Instance.GetPsdName()));
     }
 
     static Canvas GetCanvas()

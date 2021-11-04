@@ -56,12 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\SpriteAtlasEditor.cs" />
-    <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TextureFormatUtility.cs" />
     <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TPGenerator.cs" />
+    <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TexturePackerUtility.cs" />
+    <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TextureFormatUtility.cs" />
     <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TextureImporterExtensions.cs" />
     <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TexturePackerImporter.cs" />
-    <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\TexturePackerUtility.cs" />
+    <Compile Include="Packages\cn.pantheongames.texturepacker\Editor\SpriteAtlasEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\cn.pantheongames.texturepacker\Editor\Unity.TexturePacker.Editor.asmdef" />
@@ -310,6 +310,9 @@
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets\codeandweb.com\Editor\TexturePackerImporter.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -318,9 +321,6 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="TexturePackerImporter">
-      <HintPath>Assets\codeandweb.com\Editor\TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

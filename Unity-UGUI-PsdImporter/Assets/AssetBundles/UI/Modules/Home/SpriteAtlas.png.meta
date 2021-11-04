@@ -140,6 +140,102 @@ TextureImporter:
   - first:
       213: -290400580914478803
     second: common_head_zjicon
+  - first:
+      213: -8649055461777433733
+    second: commom_jineng_icon1
+  - first:
+      213: -4886368268909192636
+    second: common_pic_guang_d1
+  - first:
+      213: -1704082631034217022
+    second: common_pic_guang_x1
+  - first:
+      213: -32885599627343406
+    second: common_pic_jiaohw1
+  - first:
+      213: 7479823407458267771
+    second: common_pic_jiaohw2
+  - first:
+      213: 4932175655721105319
+    second: common_popt_bgty_9S
+  - first:
+      213: -8717813918592735020
+    second: common_popt_bgty_g_9S
+  - first:
+      213: 3972673982741833109
+    second: common_popt_bgys1_9S-50
+  - first:
+      213: -9051779724415058378
+    second: common_popt_close
+  - first:
+      213: 8913294577691309573
+    second: common_popt_sbg_9S
+  - first:
+      213: -5206322966630593906
+    second: common_popt_titlebg_LeftHalf
+  - first:
+      213: 566125268856441141
+    second: common_titlebg_bu01l
+  - first:
+      213: -1639432555202102500
+    second: item_propk_bg_bu
+  - first:
+      213: 5697151620922651194
+    second: common_icon_chakan
+  - first:
+      213: 8061963655120646824
+    second: common_pic_titlehw3
+  - first:
+      213: 1617678753470712887
+    second: common_tipsspot
+  - first:
+      213: 3508799883687167381
+    second: hero_ck_bottom1_bg_9S
+  - first:
+      213: 7270187986156529614
+    second: hero_lb_bottom1_bgx
+  - first:
+      213: -4511277669008155163
+    second: hero_lb_toptitle_bg
+  - first:
+      213: -1055269347805256238
+    second: hero_lb_xinbg
+  - first:
+      213: 1887807863734277958
+    second: hero_tabt_bgcse_9S
+  - first:
+      213: 1001742200965065890
+    second: hero_tabt_bgtiao_9S
+  - first:
+      213: -4763724720185840575
+    second: hero_tabt_bgty
+  - first:
+      213: -4596932983581096115
+    second: hero_tabt_bgxz
+  - first:
+      213: -987207537588294677
+    second: home_upgrade_icon_bg
+  - first:
+      213: 8351489381267886344
+    second: item_jineng_icon1
+  - first:
+      213: 562101395103058493
+    second: item_propk_bg_gn
+  - first:
+      213: 4854601403222480973
+    second: item_propk_bg_nuber
+  - first:
+      213: 1602222559827500026
+    second: item_propk_bg_og
+  - first:
+      213: -8463408263706232915
+    second: item_propk_bg_pl
+  - first:
+      213: 6195287590837794011
+    second: item_propk_bg_rd
+  - first:
+      213: 8286143290703663735
+    second: item_propk_bg_wt
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -265,11 +361,32 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: commom_jineng_icon1
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 66
+        width: 121
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b9a16d1e168f780800000000000000
+      internalID: -8649055461777433733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: common_btnt_big_og
       rect:
         serializedVersion: 2
-        x: 1
-        y: 139
+        x: 1232
+        y: 283
         width: 212
         height: 76
       alignment: 0
@@ -286,32 +403,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: common_control_btn_yjbgbig
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 36
-        width: 127
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ed3d307f380aa070800000000000000
-      internalID: 8118310346847763936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: common_control_returnt_icon
       rect:
         serializedVersion: 2
-        x: 577
-        y: 479
+        x: 986
+        y: 95
         width: 89
         height: 89
       alignment: 0
@@ -332,7 +428,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 570
+        y: 95
         width: 748
         height: 49
       alignment: 0
@@ -352,10 +448,10 @@ TextureImporter:
       name: common_head_icon_bs
       rect:
         serializedVersion: 2
-        x: 753
-        y: 1904
-        width: 34
-        height: 34
+        x: 1
+        y: 21
+        width: 25
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +469,10 @@ TextureImporter:
       name: common_head_icon_jb
       rect:
         serializedVersion: 2
-        x: 668
-        y: 527
-        width: 37
-        height: 41
+        x: 1665
+        y: 330
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,8 +490,8 @@ TextureImporter:
       name: common_head_icon_ks
       rect:
         serializedVersion: 2
-        x: 1
-        y: 6
+        x: 1923
+        y: 415
         width: 31
         height: 28
       alignment: 0
@@ -415,8 +511,8 @@ TextureImporter:
       name: common_head_icon_ls
       rect:
         serializedVersion: 2
-        x: 577
-        y: 397
+        x: 1080
+        y: 174
         width: 25
         height: 33
       alignment: 0
@@ -436,8 +532,8 @@ TextureImporter:
       name: common_head_icon_mt
       rect:
         serializedVersion: 2
-        x: 625
-        y: 448
+        x: 986
+        y: 64
         width: 27
         height: 29
       alignment: 0
@@ -457,8 +553,8 @@ TextureImporter:
       name: common_head_icon_st
       rect:
         serializedVersion: 2
-        x: 668
-        y: 493
+        x: 1923
+        y: 381
         width: 23
         height: 32
       alignment: 0
@@ -478,8 +574,8 @@ TextureImporter:
       name: common_head_picx
       rect:
         serializedVersion: 2
-        x: 266
-        y: 234
+        x: 2028
+        y: 468
         width: 6
         height: 43
       alignment: 0
@@ -499,8 +595,8 @@ TextureImporter:
       name: common_head_zjbg
       rect:
         serializedVersion: 2
-        x: 215
-        y: 181
+        x: 1629
+        y: 325
         width: 34
         height: 34
       alignment: 0
@@ -520,8 +616,8 @@ TextureImporter:
       name: common_head_zjicon
       rect:
         serializedVersion: 2
-        x: 707
-        y: 543
+        x: 33
+        y: 56
         width: 25
         height: 25
       alignment: 0
@@ -538,11 +634,32 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: common_icon_chakan
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 52
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32b2a4e639501f40800000000000000
+      internalID: 5697151620922651194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: common_pic_popt_title_zsa
       rect:
         serializedVersion: 2
-        x: 789
-        y: 1918
+        x: 1107
+        y: 187
         width: 26
         height: 20
       alignment: 0
@@ -559,13 +676,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: common_titlebg_bk
+      name: common_pic_titlehw3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 100
-        width: 175
-        height: 37
+        x: 753
+        y: 186
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -573,20 +690,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3ae663cc383331c0800000000000000
-      internalID: -4525211366949721540
+      spriteID: 8a2739fea39d1ef60800000000000000
+      internalID: 8061963655120646824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: common_titlebg_bubig
+      name: common_tipsspot
       rect:
         serializedVersion: 2
-        x: 753
-        y: 1940
-        width: 236
-        height: 45
+        x: 1355
+        y: 258
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,8 +711,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35bda898f230b7bc0800000000000000
-      internalID: -3784427559168844973
+      spriteID: 73c81556146237610800000000000000
+      internalID: 1617678753470712887
       vertices: []
       indices: 
       edges: []
@@ -605,7 +722,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 621
+        y: 325
         width: 750
         height: 90
       alignment: 0
@@ -622,34 +739,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lcuk_icon_cj
-      rect:
-        serializedVersion: 2
-        x: 577
-        y: 432
-        width: 46
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a7c3efd7d08790c0800000000000000
-      internalID: -4569041632281507929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: luck_bg_Texture
+      name: hero_ck_bottom1_bg_9S
       rect:
         serializedVersion: 2
         x: 1
-        y: 713
+        y: 417
         width: 750
-        height: 1334
+        height: 94
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,41 +753,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bce81c81853fcbac0800000000000000
-      internalID: -3837925222728495413
+      spriteID: 5950b1f57e2c1b030800000000000000
+      internalID: 3508799883687167381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: luck_bottom_gjcj
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 285
-        width: 283
-        height: 283
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a86189e1d9999170800000000000000
-      internalID: 8185742924567373989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: luck_bottom_ptcj
+      name: hero_lb_bottom1_bgx
       rect:
         serializedVersion: 2
         x: 1
-        y: 279
-        width: 289
-        height: 289
+        y: 83
+        width: 750
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,41 +774,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f146cdd57edd3010800000000000000
-      internalID: 1170336075999494647
+      spriteID: ec72c2d4475e4e460800000000000000
+      internalID: 7270187986156529614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: luck_icon_zssp
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 65
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27f007d4742332e90800000000000000
-      internalID: -7051737309708808334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: luck_titlebg_gj_LeftHalf
+      name: hero_lb_toptitle_bg
       rect:
         serializedVersion: 2
         x: 1
-        y: 217
-        width: 263
-        height: 60
+        y: 235
+        width: 750
+        height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,20 +795,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15983ef6e1d2c9f70800000000000000
-      internalID: 9195274147933161809
+      spriteID: 5eddd9f9cd8b461c0800000000000000
+      internalID: -4511277669008155163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: luck_titlebg_pt_LeftHalf
+      name: hero_lb_xinbg
       rect:
         serializedVersion: 2
-        x: 753
-        y: 1987
-        width: 263
-        height: 60
+        x: 1840
+        y: 361
+        width: 81
+        height: 82
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,8 +816,281 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5080cded4ed5258e0800000000000000
-      internalID: -1706198071247108091
+      spriteID: 2d5a5b58e1eea51f0800000000000000
+      internalID: -1055269347805256238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgcse_9S
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 146
+        width: 750
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64712120047d23a10800000000000000
+      internalID: 1887807863734277958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgtiao_9S
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 88
+        width: 750
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac6a0d6937e6ed00800000000000000
+      internalID: 1001742200965065890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgty
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 445
+        width: 186
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c63953b99d3edb0800000000000000
+      internalID: -4763724720185840575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_tabt_bgxz
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 301
+        width: 181
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d474f599ec96430c0800000000000000
+      internalID: -4596932983581096115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_upgrade_icon_bg
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 226
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb267a99fbbc42f0800000000000000
+      internalID: -987207537588294677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_jineng_icon1
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 59
+        width: 108
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8015beb185376e370800000000000000
+      internalID: 8351489381267886344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_bu
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 209
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bb7f1f6c09f39e0800000000000000
+      internalID: -1639432555202102500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_gn
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 361
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a8ede9d3cfcc700800000000000000
+      internalID: 562101395103058493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_nuber
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 250
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48503561420f5340800000000000000
+      internalID: 4854601403222480973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_og
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 361
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb92a1edec3c3610800000000000000
+      internalID: 1602222559827500026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_pl
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 361
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da73fa4760feb8a80800000000000000
+      internalID: -8463408263706232915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_rd
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 361
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4b5456d351af550800000000000000
+      internalID: 6195287590837794011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_propk_bg_wt
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 361
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772d068cb6b4ef270800000000000000
+      internalID: 8286143290703663735
       vertices: []
       indices: 
       edges: []
