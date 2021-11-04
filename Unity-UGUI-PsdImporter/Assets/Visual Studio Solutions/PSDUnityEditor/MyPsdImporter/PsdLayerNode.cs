@@ -44,7 +44,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         public PsdLayerNode(IPsdLayer layer):this(ExportUtility.GetRectFromLayer(layer))
         {
-            name = MyPsdImporterCtrl.Instance.GetRegularName(layer.Name);   
+            name = MyPsdImporterCtrl.Instance.GetRegularName(layer.Name);
         }
 
         public void AddChild(PsdLayerNode node)

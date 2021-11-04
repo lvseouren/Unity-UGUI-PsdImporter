@@ -22,6 +22,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         static MyPsdImporterCtrl instance;
         internal Transform uiRoot;
         Dictionary<string, PsdLayerNode> imgDict;
+        string moduleName;
 
         public static MyPsdImporterCtrl Instance
         {
@@ -31,6 +32,13 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     instance = new MyPsdImporterCtrl();
                 return instance;
             }
+        }
+
+        public void InitEnvironment(string psdPath)
+        {
+            string[] data = psdPath.Split('/');
+            var index = Array.FindIndex(data, x => x == "Modules");
+            moduleName = data[index + 1];
         }
         public PsdLayerNode PreParsePsdLayers(PsdDocument psd)
         {
@@ -97,7 +105,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         public string GetModuleName()
         {
-            return "Home";
+            return moduleName;
         }
 
         string GetAtlasPath()
