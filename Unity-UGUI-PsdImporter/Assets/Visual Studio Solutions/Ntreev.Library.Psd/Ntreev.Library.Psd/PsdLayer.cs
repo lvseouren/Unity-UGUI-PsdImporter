@@ -22,6 +22,9 @@
 using System;
 using System.Linq;
 using Ntreev.Library.Psd.Readers.LayerAndMaskInformation;
+using UnityEngine;
+using System.Collections.Generic;
+using Ntreev.Library.Psd.Readers.LayerResources;
 
 namespace Ntreev.Library.Psd
 {
@@ -270,6 +273,45 @@ namespace Ntreev.Library.Psd
             this.right = right;
             this.bottom = bottom;
         }
+
+        public void GetGradientColor(out Color32[] colors, out int angle, out bool hasGradient)
+        {
+            colors = new Color32[2];
+            hasGradient = false;
+            angle = 0;
+            if(Resources.Contains("lfx2"))
+            {
+                var data = (Reader_lfx2)Resources["lfx2"];
+                if(data.Contains("GrFl"))
+                {
+                    var grfiData = (DescriptorStructure)data["GrFl"];
+                    if(grfiData.Contains("Grad"))
+                    {
+                        hasGradient = true;
+                        var gradData = (DescriptorStructure)grfiData["Grad"];
+                        if(gradData.Contains("Clrs"))
+                        {
+                            var colorsData = (Structures.StructureList)gradData["Clrs"];
+                            var items = (object[])(colorsData["Items"]);
+                            int i = 0;
+                            foreach(DescriptorStructure item in items)
+                            {
+                                var colorData = (DescriptorStructure)item["Clr"];
+                                var r = (double)colorData["Rd"];
+                                var g = (double)colorData["Grn"];
+                                var b = (double)colorData["Bl"];
+                                
+                                colors[i].r = Convert.ToByte(Math.Floor(r));
+                                colors[i].g = Convert.ToByte(Math.Floor(g));
+                                colors[i].b = Convert.ToByte(Math.Floor(b));
+                                colors[i].a = 255;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         public override string ToString()
         {
             return this.Name;

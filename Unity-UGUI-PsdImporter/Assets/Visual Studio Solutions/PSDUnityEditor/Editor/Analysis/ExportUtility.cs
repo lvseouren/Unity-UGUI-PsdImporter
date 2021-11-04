@@ -523,6 +523,8 @@ namespace PSDUnity.Analysis
             Channel blue = Array.Find(layer.Channels, i => i.Type == ChannelType.Blue);
             Channel alpha = Array.Find(layer.Channels, i => i.Type == ChannelType.Alpha);
 
+            layer.GetGradientColor(out Color32[] gradientColors, out int angle, out bool hasGradient);
+
             for (int i = 0; i < pixels.Length; i++)
             {
                 //row,col:pixel-i 对应的texture2D的像素坐标值
@@ -542,6 +544,12 @@ namespace PSDUnity.Analysis
                 byte g = greenErr ? (byte)0 : green.Data[mapIndex];
                 byte b = blueErr ? (byte)0 : blue.Data[mapIndex];
                 byte a = alphaErr ? (byte)255 : alpha.Data[mapIndex];
+                if(hasGradient)
+                {
+                    r = gradientColors[0].r;
+                    g = gradientColors[0].g;
+                    b = gradientColors[0].b;
+                }
 
                 pixels[i] = new Color32(r, g, b, a);
             }
