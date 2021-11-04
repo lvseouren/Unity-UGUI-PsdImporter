@@ -285,7 +285,7 @@ namespace Ntreev.Library.Psd
                 if(data.Contains("GrFl"))
                 {
                     var grfiData = (DescriptorStructure)data["GrFl"];
-                    if(grfiData.Contains("Grad"))
+                    if((bool)grfiData["enab"] && grfiData.Contains("Grad"))
                     {
                         hasGradient = true;
                         var gradData = (DescriptorStructure)grfiData["Grad"];
@@ -305,6 +305,7 @@ namespace Ntreev.Library.Psd
                                 colors[i].g = Convert.ToByte(Math.Floor(g));
                                 colors[i].b = Convert.ToByte(Math.Floor(b));
                                 colors[i].a = 255;
+                                i++;
                             }
                         }
                     }
