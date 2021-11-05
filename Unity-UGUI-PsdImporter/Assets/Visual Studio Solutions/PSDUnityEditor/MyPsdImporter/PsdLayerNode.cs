@@ -19,18 +19,6 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         List<PsdLayerNode> childs;
         PsdLayerNode parent;
         Rect rect;
-        
-        static TextImport textImport = new TextImport();
-        static ImageRawImageImport imageImport = new ImageRawImageImport();
-        public TextImport GetTextImport()
-        {
-            return textImport;
-        }
-
-        public ImageRawImageImport GetImageImport()
-        {
-            return imageImport;
-        }
 
         public PsdLayerNode(Rect rect)
         {

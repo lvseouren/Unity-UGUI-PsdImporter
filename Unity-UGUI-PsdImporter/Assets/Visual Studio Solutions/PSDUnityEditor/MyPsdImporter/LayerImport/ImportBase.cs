@@ -38,7 +38,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             var rectTrans = go.transform as RectTransform;
             SetRectTransform(node.GetRect(), rectTrans);
             if (parent)
-                go.transform.SetParent(parent);
+                go.transform.SetParent(parent, true);
             //init component
             SetComponnets(go, node);
             return go;

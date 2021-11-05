@@ -28,12 +28,13 @@ public class PsdImpoterOverride : PSDImporter
         GameObject objSource = (GameObject)PrefabUtility.InstantiatePrefab(source);
         objSource.transform.SetParent(MyPsdImporterCtrl.Instance.uiRoot);
         objSource.transform.localPosition = Vector3.zero;
+        objSource.transform.localScale = Vector3.one;
 
         Transform contentNode = objSource.transform.Find("content");
         root.Draw(contentNode);
 
         string variantAssetPath = MyPsdImporterCtrl.Instance.GetPrefabPath(psdName);
-        GameObject obj = PrefabUtility.SaveAsPrefabAsset(objSource, variantAssetPath);
+        PrefabUtility.SaveAsPrefabAsset(objSource, variantAssetPath);
     }
 
     const string exporterPath = "Assets/Test/expoter.asset";
