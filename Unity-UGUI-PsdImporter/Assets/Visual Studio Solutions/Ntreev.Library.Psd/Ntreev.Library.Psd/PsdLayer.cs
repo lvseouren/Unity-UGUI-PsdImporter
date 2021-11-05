@@ -306,6 +306,8 @@ namespace Ntreev.Library.Psd
                                 colors[i].b = Convert.ToByte(Math.Floor(b));
                                 colors[i].a = 255;
                                 i++;
+                                if (i == colors.Length)
+                                    break;
                             }
                         }
                     }
