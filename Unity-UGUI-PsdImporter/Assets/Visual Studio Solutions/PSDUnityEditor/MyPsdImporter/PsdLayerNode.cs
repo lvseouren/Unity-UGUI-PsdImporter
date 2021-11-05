@@ -1,7 +1,4 @@
 ﻿using Ntreev.Library.Psd;
-using PSDUnity.Analysis;
-using PSDUnity.Data;
-using PSDUnity.UGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +32,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             return rect;
         }
 
-        public PsdLayerNode(IPsdLayer layer):this(ExportUtility.GetRectFromLayer(layer))
+        public PsdLayerNode(IPsdLayer layer):this(MyPsdImporterCtrl.GetRectFromLayer(layer))
         {
             name = MyPsdImporterCtrl.Instance.GetRegularName(layer.Name);
         }

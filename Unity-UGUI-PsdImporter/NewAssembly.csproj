@@ -53,54 +53,26 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\PreviewWindow.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleScrollRectCanvasChecker.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\ButtonLayerImportGUI.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\MyPsdImporterCtrl.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\PrefabProcessTools.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\TextureFormatUtility.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\RuleObjectDrawer.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\AnalysisUtility.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\GroupNodeDrawer.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\SliderLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\PsdPreviewer.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\TreeViewUtil.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\AttributeDrawer\CustomFieldAttributeDrawer.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleSpriteAtlas.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\PSDPreviewWindow.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleCanvas.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\FindTightRectJob.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\PreviewItem.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\PanelLayerImportGUI.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\TextImport.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleAssetFormater.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\LayerImportFactory.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImageImport.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModulePrefabSpriteChecker.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\EmptyLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\GroupHolderDrawer.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImportBase.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\TextureImporterExtensions.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\ExporterDrawer.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\ExporterTreeView.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\PsdImpoterOverride.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\ScrollViewLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\ExportUtility.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\ImgNodeDrawer.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\InputFieldLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\DropdownLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\GridLayerImportGUI.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\PsdLayerNode.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleProcessor.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\GroupLayerImportGUI.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\MyImgNode.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleSwitchPrefabSprite.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleAnimatorChecker.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\ToggleLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\ScrollbarLayerImportGUI.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\RuleHelper.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\GroupNodeEditor.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\MyImgNode.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImageImport.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\TextImport.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImportBase.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\LayerImportFactory.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\EmptyImport.cs" />
   </ItemGroup>
   <ItemGroup>

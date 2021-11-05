@@ -1,8 +1,6 @@
 ﻿using Ntreev.Library.Psd;
 using PantheonGames.TexturePacker;
 using PG;
-using PSDUnity.Analysis;
-using PSDUnity.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +15,25 @@ using UnityEngine;
 
 namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 {
+    public struct MyRect
+    {
+        public MyRect(int l, int r, int t, int b)
+        {
+            left = l;
+            right = r;
+            top = t;
+            bottom = b;
+        }
+
+        public MyRect(float l, float r, float t, float b) : this((int)l, (int)r, (int)t, (int)b)
+        {
+        }
+        public int left;
+        public int right;
+        public int top;
+        public int bottom;
+    }
+
     public class MyPsdImporterCtrl
     {
         static MyPsdImporterCtrl instance;
