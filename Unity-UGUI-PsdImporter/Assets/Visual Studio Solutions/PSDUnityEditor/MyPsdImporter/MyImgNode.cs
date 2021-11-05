@@ -86,14 +86,14 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         }
         public MyImgNode(string name, Rect rect, Color color) : this(rect)
         {
-            this.Name = name;
+            SetName(name);
             this.type = ImgType.Color;
             this.color = color;
         }
         public MyImgNode(string name, Rect rect, string font, int fontSize, string text, Color color) : this(rect)
         {
             this.type = ImgType.Label;
-            this.Name = name;
+            SetName(name);
             this.font = null; /*Debug.Log(font);*/
             this.fontSize = fontSize;
             this.text = text;
@@ -122,7 +122,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         /// <returns></returns>
         public MyImgNode Analyzing(string name)
         {
-            this.Name = name;
+            SetName(name);
             this.customNameType = SuffixType.None;
             this.forceAddress = false;
             //添加后缀
@@ -132,6 +132,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 this.texture.name = TextureName;
             }
             return this;
+        }
+
+        public void SetName(string name)
+        {
+            Name = MyPsdImporterCtrl.Instance.GetRegularName(name);
         }
 
         //texture 保存为Texture还是Sprite

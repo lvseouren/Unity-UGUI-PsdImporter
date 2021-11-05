@@ -102,14 +102,17 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         string GetPrefabFolderPath()
         {
-            return GetModulePath() + "/" + UIModuleProcessor.kPrefabsName;
+            var ret = GetModulePath() + "/" + UIModuleProcessor.kPrefabsName;
+            if (!Directory.Exists(ret))
+                Directory.CreateDirectory(ret);
+            return ret;
         }
 
         private static T[] LoadAllObjectFromDir<T>(string dirName) where T : UnityEngine.Object
         {
             List<T> assets = new List<T>();
 
-            if (System.IO.Directory.Exists(dirName))
+            if (Directory.Exists(dirName))
             {
                 if (!string.IsNullOrEmpty(dirName))
                 {
