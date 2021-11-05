@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\PreviewWindow.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleScrollRectCanvasChecker.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\ButtonLayerImportGUI.cs" />
@@ -99,6 +96,12 @@
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\LayerImportGUI\ScrollbarLayerImportGUI.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\Analysis\RuleHelper.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\Editor\GroupNodeEditor.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\MyImgNode.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImageImport.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\TextImport.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImportBase.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\LayerImportFactory.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\EmptyImport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Visual Studio Solutions\PSDUnityEditor\NewAssembly.asmdef" />

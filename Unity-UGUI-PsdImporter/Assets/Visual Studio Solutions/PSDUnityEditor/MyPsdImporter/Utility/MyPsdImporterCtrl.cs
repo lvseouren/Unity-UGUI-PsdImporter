@@ -118,7 +118,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         internal void RefreshImageSprite(PsdLayerNode root)
         {
-            List<ImgNode> images = new List<ImgNode>();
+            List<MyImgNode> images = new List<MyImgNode>();
             root.GetImage(images);
             for (int i = 0; i < images.Count; ++i)
                 images[i].sprite = GetSprite(GetRegularName(images[i].Name));
@@ -259,9 +259,9 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             return name;
         }
 
-        public static ImgNode GenerateLayerImgNode(PsdLayer layer, PsdLayerNode node, bool forceSprite = false)
+        public static MyImgNode GenerateLayerImgNode(PsdLayer layer, PsdLayerNode node, bool forceSprite = false)
         {
-            ImgNode data = null;
+            MyImgNode data = null;
             var canvasRect = new MyRect(0, rootSize.x, 0, rootSize.y);
             var texture = CreateClipTexture(layer, canvasRect, out Rect clipRect);
             var rect = clipRect;
@@ -269,25 +269,25 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             switch (layer.LayerType)
             {
                 case LayerType.Normal:
-                    data = new ImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(null, layer.Name);
+                    data = new MyImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(layer.Name);
                     break;
                 case LayerType.Color:
                     if (forceSprite)
                     {
-                        data = new ImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(null, layer.Name);
+                        data = new MyImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(layer.Name);
                     }
                     else
                     {
-                        data = new ImgNode(layer.Name, rect, GetLayerColor(layer)).SetIndex(CalcuteLayerID(layer));
+                        data = new MyImgNode(layer.Name, rect, GetLayerColor(layer)).SetIndex(CalcuteLayerID(layer));
                     }
                     break;
                 case LayerType.Text:
                     var textInfo = layer.Records.TextInfo;
                     var color = new Color(textInfo.color[0], textInfo.color[1], textInfo.color[2], textInfo.color[3]);
-                    data = new ImgNode(layer.Name, rect, textInfo.fontName, textInfo.fontSize, textInfo.text, color);
+                    data = new MyImgNode(layer.Name, rect, textInfo.fontName, textInfo.fontSize, textInfo.text, color);
                     break;
                 case LayerType.Complex:
-                    data = new ImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(null, layer.Name);
+                    data = new MyImgNode("", rect, texture).SetIndex(CalcuteLayerID(layer)).Analyzing(layer.Name);
                     break;
                 default:
                     break;
@@ -457,6 +457,32 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             var xMin = (right + left - rootSize.x) * 0.5f;
             var yMin = -(top + bottom - rootSize.y) * 0.5f;
             rect = new Rect(xMin, yMin, width, height);
+        }
+
+        public static void SetPictureOrLoadColor(MyImgNode image, UnityEngine.UI.Graphic graph)
+        {
+            if (graph == null) return;
+
+            graph.color = image.color;
+            switch (image.type)
+            {
+                case ImgType.Image:
+                    ((UnityEngine.UI.Image)graph).sprite = image.sprite;
+                    break;
+                case ImgType.Texture:
+                    ((UnityEngine.UI.RawImage)graph).texture = image.texture;
+                    break;
+                case ImgType.Label:
+                    var myText = (UnityEngine.UI.Text)graph;
+                    myText.text = image.text;
+                    myText.fontSize = image.fontSize;
+                    break;
+                case ImgType.AtlasImage:
+                    ((UnityEngine.UI.Image)graph).sprite = image.sprite;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

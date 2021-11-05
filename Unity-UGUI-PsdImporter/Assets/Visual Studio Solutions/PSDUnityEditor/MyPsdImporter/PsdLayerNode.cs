@@ -13,7 +13,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 {
     public class PsdLayerNode
     {
-        public ImgNode image;
+        public MyImgNode image;
         public string name;
 
         List<PsdLayerNode> childs;
@@ -42,6 +42,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             this.rect = rect;
         }
 
+        public Rect GetRect()
+        {
+            return rect;
+        }
+
         public PsdLayerNode(IPsdLayer layer):this(ExportUtility.GetRectFromLayer(layer))
         {
             name = MyPsdImporterCtrl.Instance.GetRegularName(layer.Name);
@@ -58,28 +63,13 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         GameObject DrawUGUIGameobject(Transform parent)
         {
-            //gen ugui go
-            var go = new GameObject(name, typeof(RectTransform));
-            go.layer = UnityEngine.LayerMask.NameToLayer("UI");
-            go.transform.SetParent(MyPsdImporterCtrl.Instance.uiRoot, false);
-            Import.SetRectTransform(rect, go.transform as RectTransform);
-            if (parent)
-                go.transform.SetParent(parent);
-            //init component if image!=null
-            if (image!=null)
-            {
-                if (image.type == PSDUnity.ImgType.Label)
-                    GetTextImport().DrawImage(image, go);
-                else
-                    GetImageImport().DrawImage(image, go);
-            }
- 
+            var go = LayerImportFactory.Instance.GetLayerImporter(this).ImportNode(this, parent);
             return go;
         }
 
-        internal void GetImage(List<ImgNode> images)
+        internal void GetImage(List<MyImgNode> images)
         {
-            if(image!=null&&image.type != PSDUnity.ImgType.Label)
+            if(image!=null&&image.type != ImgType.Label)
                 images.Add(image);
             if(childs!=null)
                 foreach (var child in childs)
