@@ -4,56 +4,34 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:c5458955567603a4defc6f8f5a2fc190:c1043b53958680b3c2f434fd06782ac6:ec3fb199b0508cab7b84c5248fec6def$
+# $TexturePacker:SmartUpdate:877a2a98b60fd9d97954f64392a8fc8c:6f62695f2acfe1b700ce2757eb55986e:ec3fb199b0508cab7b84c5248fec6def$
 #
 :format=40300
 :texture=SpriteAtlas.png
-:size=2048x2048
+:size=1024x512
 :pivotpoints=enabled
 :borders=enabled
 
-commom_jineng_icon1;609;163;121;118; 0.5;0.5; 0;0;0;0
-common_btnt_big_og;1;53;212;76; 0.5;0.5; 0;0;0;0
-common_control_btn_yjbgbig;1365;1771;127;62; 0.5;0.5; 0;0;0;0
-common_control_returnt_icon;753;999;89;89; 0.5;0.5; 0;0;0;0
-common_head_bg_9S;1;295;748;49; 0.5;0.5; 0;0;0;0
-common_head_icon_bs;1565;1951;34;34; 0.5;0.5; 0;0;0;0
-common_head_icon_jb;753;899;37;41; 0.5;0.5; 0;0;0;0
-common_head_icon_ks;863;1187;31;28; 0.5;0.5; 0;0;0;0
-common_head_icon_ls;753;864;25;33; 0.5;0.5; 0;0;0;0
-common_head_icon_mt;1044;1691;27;29; 0.5;0.5; 0;0;0;0
-common_head_icon_st;1517;1870;23;32; 0.5;0.5; 0;0;0;0
-common_head_picx;753;819;6;43; 0.5;0.5; 0;0;0;0
-common_head_zjbg;1517;1904;34;34; 0.5;0.5; 0;0;0;0
-common_head_zjicon;905;1225;25;25; 0.5;0.5; 0;0;0;0
-common_icon_chakan;1080;1733;30;29; 0.5;0.5; 0;0;0;0
-common_pic_popt_title_zsa;1903;2027;26;20; 0.5;0.5; 0;0;0;0
-common_pic_titlehw3;753;1722;325;325; 0.5;0.5; 0;0;0;0
-common_tipsspot;178;28;23;23; 0.5;0.5; 0;0;0;0
-common_titlebg_bk;1;14;175;37; 0.5;0.5; 0;0;0;0
-common_titlebg_bubig;1630;2002;236;45; 0.5;0.5; 0;0;0;0
-common_titlet_picbg_LeftHalf;1;525;750;90; 0.5;0.5; 0;0;0;0
-hero_ck_bottom1_bg_9S;1;617;750;94; 0.5;0.5; 0;0;0;0
-hero_lb_bottom1_bgx;1;283;750;3; 0.5;0.5; 0;0;0;0
-hero_lb_toptitle_bg;1;435;750;88; 0.5;0.5; 0;0;0;0
-hero_lb_xinbg;905;1285;81;82; 0.5;0.5; 0;0;0;0
-hero_tabt_bgcse_9S;1;346;750;87; 0.5;0.5; 0;0;0;0
-hero_tabt_bgtiao_9S;1;288;750;5; 0.5;0.5; 0;0;0;0
-hero_tabt_bgty;215;63;186;66; 0.5;0.5; 0;0;0;0
-hero_tabt_bgxz;403;71;181;58; 0.5;0.5; 0;0;0;0
-home_upgrade_icon_bg;753;942;56;55; 0.5;0.5; 0;0;0;0
-item_jineng_icon1;753;1090;108;125; 0.5;0.5; 0;0;0;0
-item_propk_bg_bu;305;131;150;150; 0.5;0.5; 0;0;0;0
-item_propk_bg_gn;153;131;150;150; 0.5;0.5; 0;0;0;0
-item_propk_bg_nuber;905;1252;63;31; 0.5;0.5; 0;0;0;0
-item_propk_bg_og;753;1217;150;150; 0.5;0.5; 0;0;0;0
-item_propk_bg_pl;1365;1835;150;150; 0.5;0.5; 0;0;0;0
-item_propk_bg_rd;457;131;150;150; 0.5;0.5; 0;0;0;0
-item_propk_bg_wt;1;131;150;150; 0.5;0.5; 0;0;0;0
-lcuk_icon_cj;1517;1940;46;45; 0.5;0.5; 0;0;0;0
-luck_bg_Texture;1;713;750;1334; 0.5;0.5; 0;0;0;0
-luck_bottom_gjcj;1080;1764;283;283; 0.5;0.5; 0;0;0;0
-luck_bottom_ptcj;753;1431;289;289; 0.5;0.5; 0;0;0;0
-luck_icon_zssp;1868;2014;33;33; 0.5;0.5; 0;0;0;0
-luck_titlebg_gj_LeftHalf;1365;1987;263;60; 0.5;0.5; 0;0;0;0
-luck_titlebg_pt_LeftHalf;753;1369;263;60; 0.5;0.5; 0;0;0;0
+common_btnt_big_og;753;373;212;76; 0.5;0.5; 0;0;0;0
+common_control_btn_yjbgbig;577;220;127;62; 0.5;0.5; 0;0;0;0
+common_control_returnt_icon;577;129;89;89; 0.5;0.5; 0;0;0;0
+common_head_bg_9S;1;370;748;49; 0.5;0.5; 0;0;0;0
+common_head_icon_bs;815;337;34;34; 0.5;0.5; 0;0;0;0
+common_head_icon_jb;706;241;37;41; 0.5;0.5; 0;0;0;0
+common_head_icon_ks;613;99;31;28; 0.5;0.5; 0;0;0;0
+common_head_icon_ls;668;185;25;33; 0.5;0.5; 0;0;0;0
+common_head_icon_mt;851;342;27;29; 0.5;0.5; 0;0;0;0
+common_head_icon_st;266;45;23;32; 0.5;0.5; 0;0;0;0
+common_head_picx;668;140;6;43; 0.5;0.5; 0;0;0;0
+common_head_zjbg;577;93;34;34; 0.5;0.5; 0;0;0;0
+common_head_zjicon;292;58;25;25; 0.5;0.5; 0;0;0;0
+common_pic_popt_title_zsa;880;351;26;20; 0.5;0.5; 0;0;0;0
+common_titlebg_bk;577;284;175;37; 0.5;0.5; 0;0;0;0
+common_titlebg_bubig;577;323;236;45; 0.5;0.5; 0;0;0;0
+common_titlet_picbg_LeftHalf;1;421;750;90; 0.5;0.5; 0;0;0;0
+lcuk_icon_cj;967;404;46;45; 0.5;0.5; 0;0;0;0
+luck_bottom_gjcj;292;85;283;283; 0.5;0.5; 0;0;0;0
+luck_bottom_ptcj;1;79;289;289; 0.5;0.5; 0;0;0;0
+luck_icon_zssp;754;288;33;33; 0.5;0.5; 0;0;0;0
+luck_titlebg_gj_LeftHalf;753;451;263;60; 0.5;0.5; 0;0;0;0
+luck_titlebg_pt_LeftHalf;1;17;263;60; 0.5;0.5; 0;0;0;0
