@@ -61,8 +61,10 @@ namespace PG
         public static void FormatSpecificUIModule(string module)
         {
             AssetDatabase.Refresh();
-            var path = kUIModuleRootPath + "/" + module + "/Atlas";
-            var guids = AssetDatabase.FindAssets("t:texture", new[] { path });
+
+            //sprite
+            var spritePath = kUIModuleRootPath + "/" + module + "/" + kAtlasName;
+            var guids = AssetDatabase.FindAssets("t:texture", new[] { spritePath });
             foreach (var guid in guids)
             {
                 var filePath = AssetDatabase.GUIDToAssetPath(guid);
@@ -83,7 +85,24 @@ namespace PG
 
                 }
             }
-
+            //texture
+            var texturePath = kUIModuleRootPath + "/" + module + "/" + kTextureName;
+            guids = AssetDatabase.FindAssets("t:texture", new[] { texturePath });
+            foreach (var guid in guids)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                TextureFormatUtility.SetPreferredTextureSettings(path);
+                TextureFormatUtility.SetPreferredPlatformSettings(path, (apply, revert) =>
+                {
+                    TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+                    if (!importer.DoesSourceTextureHaveAlpha())
+                    {
+                        if (apply.name == "Android") apply.format = TextureImporterFormat.ETC2_RGB4;
+                        else if (apply.name == "iPhone") apply.format = TextureImporterFormat.ASTC_6x6;
+                    }
+                });
+                UIModuleAssetFormater.CheckTextureValidate(path);
+            }
             AssetDatabase.Refresh();
         }
 

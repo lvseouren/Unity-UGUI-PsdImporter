@@ -32,6 +32,8 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             {
                 pic = InitComponent<Image>(go);
             }
+            pic.raycastTarget = false;
+
             MyPsdImporterCtrl.SetPictureOrLoadColor(image, pic);
         }
     }

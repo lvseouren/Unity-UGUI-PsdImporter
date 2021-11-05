@@ -63,11 +63,6 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             psdName = psdName.Split('.')[0];
         }
 
-        internal string GetPrefabPath(string psdName)
-        {
-            return GetPrefabFolderPath() + "/" + psdName + ".prefab";
-        }
-
         public PsdLayerNode PreParsePsdLayers(PsdDocument psd)
         {
             if (imgDict == null)
@@ -85,6 +80,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         }
 
         #region resource process
+        internal string GetPrefabPath(string psdName)
+        {
+            return GetPrefabFolderPath() + "/" + psdName + ".prefab";
+        }
+
         string GetModulePath()
         {
             return UIModuleProcessor.kUIModuleRootPath +"/" + GetModuleName();
@@ -92,12 +92,41 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         string GetAtlasFolderPath()
         {
-            return GetModulePath() + "/Atlas";
+            return GetModulePath() + "/" + UIModuleProcessor.kAtlasName;
+        }
+
+        string GetTextureFolderPath()
+        {
+            return GetModulePath() + "/" + UIModuleProcessor.kTextureName;
         }
 
         string GetPrefabFolderPath()
         {
-            return GetModulePath() + "/Prefabs";
+            return GetModulePath() + "/" + UIModuleProcessor.kPrefabsName;
+        }
+
+        private static T[] LoadAllObjectFromDir<T>(string dirName) where T : UnityEngine.Object
+        {
+            List<T> assets = new List<T>();
+
+            if (System.IO.Directory.Exists(dirName))
+            {
+                if (!string.IsNullOrEmpty(dirName))
+                {
+                    var textures = Directory.GetFiles(dirName, "*.png", SearchOption.TopDirectoryOnly);
+                    foreach (var item in textures)
+                    {
+                        var assetPath = item.Replace("\\", "/").Replace(Application.dataPath, "Assets");
+                        T obj = AssetDatabase.LoadAssetAtPath<T>(assetPath);
+                        if (obj != null)
+                        {
+                            assets.Add(obj);
+                        }
+                    }
+                }
+            }
+
+            return assets.ToArray();
         }
 
         Sprite GetSprite(string name)
@@ -137,8 +166,15 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         {
             List<MyImgNode> images = new List<MyImgNode>();
             root.GetImage(images);
+            var moduleTextures = LoadAllObjectFromDir<Texture2D>(GetTextureFolderPath());
             for (int i = 0; i < images.Count; ++i)
-                images[i].sprite = GetSprite(GetRegularName(images[i].Name));
+            {
+                var image = images[i];
+                if (image.IsTexture())
+                    image.texture = Array.Find(moduleTextures, x => x.name == image.Name);
+                else
+                    image.sprite = GetSprite(GetRegularName(images[i].Name));
+            }
         }
 
         public string GetModuleName()
@@ -146,15 +182,6 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             return moduleName;
         }
 
-        string GetAtlasPath()
-        {
-            return GetModulePath() + "/" + GetModuleName() + "Atlas.png";
-        }
-
-        string GetPrefabPath()
-        {
-            return GetModulePath() + "/Prefabs";
-        }
         public void CreateTextures()
         {
             foreach(var node in imgDict)
@@ -164,36 +191,18 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 {
                     // Need to load the image first
                     byte[] buf = EncordToPng(texture);
-                    var atlasRoot = GetAtlasFolderPath();
-                    if(!Directory.Exists(atlasRoot))
-                        Directory.CreateDirectory(atlasRoot);
-
+                    bool isTexture = node.Value.image.IsTexture();
+                    string rootPath = isTexture ? GetTextureFolderPath() : GetAtlasFolderPath();
+                    if (!Directory.Exists(rootPath))
+                        Directory.CreateDirectory(rootPath);
                     var name = GetRegularName(node.Key);
-                    var path = string.Format(atlasRoot + "/{0}.png", name);
+                    var path = string.Format(rootPath + "/{0}.png", name);
                     //if (!File.Exists(path))
                     {
                         File.WriteAllBytes(path, buf);
-
-                        try
-                        {
-                            TextureFormatUtility.SetPreferredSpriteSettings(path, (settings, spriteSettings) =>
-                            {
-                                settings.spriteBorder = spriteSettings.spriteBorder;
-                            }, importer => false);
-                            TextureFormatUtility.SetPreferredPlatformSettings(path);
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.LogError(e);
-                        }
-                        finally
-                        {
-
-                        }
                     }
                 }
             }
-            //ProcessAtlas(null);
         }
 
         /// <summary>
@@ -232,12 +241,6 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             UIModuleSpriteAtlas.Run(UIModuleProcessor.kUIModuleRootPath + "/" + moduleName, null);
         }
         #endregion
-        //遍历所有图层（有图的，非group），剔除外围的透明像素得到一个真正的rect
-        public void ExtractLayerRectRectAndImage(string psdFile)
-        {
-            //FindTightRectJob.Execute()
-        }
-
         public PsdLayerNode GenerateLayerNode(PsdLayer root)
         {
             PsdLayerNode node = new PsdLayerNode(root);

@@ -82,7 +82,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             this.baseName = baseName;
             this.rect = rect;
             this.texture = texture;
-            this.type = ImgType.AtlasImage;
+            this.type = IsTexture()?ImgType.Texture:ImgType.AtlasImage;
         }
         public MyImgNode(string name, Rect rect, Color color) : this(rect)
         {
@@ -132,6 +132,12 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 this.texture.name = TextureName;
             }
             return this;
+        }
+
+        //texture 保存为Texture还是Sprite
+        public bool IsTexture()
+        {
+            return texture ? texture.width > 500 && texture.height > 500 : false;
         }
     }
 }
