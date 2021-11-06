@@ -38,6 +38,8 @@ namespace PG
              
             callback?.Invoke("Packing UI SpriteAtlas...", 1);
             TPGenerator.PackTextures(spriteAtlas);
+            AssetDatabase.Refresh();
+            spriteAtlas.RefreshDict();
         }
 
         public static void ModifySpritePivot(string path)
@@ -98,7 +100,6 @@ namespace PG
                 objects.Add(sprite);
             
             spriteAtlas.Objects = objects.ToArray();
-            spriteAtlas.RefreshDict();
         }
 
         public static string[] FindAtlasFolder(string path, HashSet<Sprite> sprites)

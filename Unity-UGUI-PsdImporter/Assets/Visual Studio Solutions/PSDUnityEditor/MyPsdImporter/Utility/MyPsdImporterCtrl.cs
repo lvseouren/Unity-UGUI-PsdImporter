@@ -235,12 +235,17 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             return new byte[0];
         }
 
-        public void ProcessAtlas(string moduleName)
+        public void FormatSprites(string moduleName)
         {
             if (string.IsNullOrEmpty(moduleName))
                 moduleName = GetModuleName();
             UIModuleProcessor.FormatSpecificUIModule(moduleName);
+        }
 
+        public void UpdateAtlas(string moduleName)
+        {
+            if (string.IsNullOrEmpty(moduleName))
+                moduleName = GetModuleName();
             UIModuleSpriteAtlas.Run(UIModuleProcessor.kUIModuleRootPath + "/" + moduleName, null);
         }
         #endregion

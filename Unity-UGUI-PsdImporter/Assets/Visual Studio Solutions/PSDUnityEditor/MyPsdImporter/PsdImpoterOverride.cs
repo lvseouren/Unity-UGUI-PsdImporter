@@ -18,9 +18,18 @@ public class PsdImpoterOverride : PSDImporter
         yield return new WaitForEndOfFrame();
         Debug.Log(moduleName);
         AssetDatabase.Refresh(); 
-        MyPsdImporterCtrl.Instance.ProcessAtlas(moduleName);
+        MyPsdImporterCtrl.Instance.FormatSprites(moduleName);
+        MyPsdImporterCtrl.Instance.UpdateAtlas(moduleName);
+        EditorCoroutines.Execute(FinalProcessPsdImported(moduleName, root, psdName));
+    }
+
+    static IEnumerator FinalProcessPsdImported(string moduleName, PsdLayerNode root, string psdName)
+    {
+        yield return new WaitForEndOfFrame();
+        Debug.Log(moduleName);
+        AssetDatabase.Refresh();
         MyPsdImporterCtrl.Instance.RefreshImageSprite(root);
-        
+
         GameObject source = AssetDatabase.LoadAssetAtPath("Assets/AssetBundles/UI/Modules/Global/Prefabs/FullPanel.prefab", typeof(GameObject)) as GameObject;
         GameObject objSource = (GameObject)PrefabUtility.InstantiatePrefab(source);
         objSource.transform.SetParent(MyPsdImporterCtrl.Instance.uiRoot);
