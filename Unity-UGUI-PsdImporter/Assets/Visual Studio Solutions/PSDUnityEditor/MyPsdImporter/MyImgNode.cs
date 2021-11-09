@@ -74,7 +74,8 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         public string text = "";
         public Font font;
         public int fontSize = 0;
-        public Color color = UnityEngine.Color.white;
+        public Color color = Color.white;
+        public bool isSliceImage = false;
         public MyImgNode() { }
 
         public MyImgNode(string baseName, Rect rect, Texture2D texture) : this(rect)

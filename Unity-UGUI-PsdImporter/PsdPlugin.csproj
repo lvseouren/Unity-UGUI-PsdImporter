@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C852437C-2725-9D29-EE96-394171C29115}</ProjectGuid>
+    <ProjectGuid>{5D6A8F89-7A94-4877-59E0-1D29606A42E8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>NewAssembly</AssemblyName>
+    <AssemblyName>PsdPlugin</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -53,31 +53,58 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleScrollRectCanvasChecker.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\MyPsdImporterCtrl.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\PrefabProcessTools.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\TextureFormatUtility.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleSpriteAtlas.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleCanvas.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\FindTightRectJob.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\TextImport.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleAssetFormater.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\LayerImportFactory.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImageImport.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModulePrefabSpriteChecker.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\ImportBase.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\TextureImporterExtensions.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\PsdImpoterOverride.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\PsdLayerNode.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleProcessor.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\MyImgNode.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleSwitchPrefabSprite.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleAnimatorChecker.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\EmptyImport.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\MyPsdImportUtility.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Visual Studio Solutions\PSDUnityEditor\NewAssembly.asmdef" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\Document.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PhotoShopFileType\PsdLoad.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\LayerInfo\LayerId.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\BitmapLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\LayerInfo\RawLayerInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Util.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\LayerInfo\LayerUnicodeName.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\BlendingRanges.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\PsdBinaryReader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\ZipImage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\Channel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResource.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PhotoShopFileType\DocumentLoadContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\Rectangle.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\RleRowLengths.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResources\ResolutionInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PhotoShopFileType\BlendModeMapping.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\RleReader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Exceptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PhotoShopFileType\ImageDecoderPdn.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResources\Thumbnail.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\EndianReverser.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResources\RawImageResource.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResources\VersionInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\LayerInfo\LayerSectionInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\ZipPredict32Image.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\LoadContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResources\AlphaChannelNames.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\PsdFile.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\PsdBlendMode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\ZipPredict16Image.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\PDNDecodeJob.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\ImageResources\UnicodeAlphaNames.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\RleImage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\Layer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\Mask.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\Surface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\ImageData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\Enums.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\LayerInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Layers\LayerInfo\InfoLayers.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\RawImage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\RleWriter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PDNWrapper\Size.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdFile\Compression\ImageDataFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\PackageCache\com.unity.2d.psdimporter@4.1.0\Editor\PSDPlugin\PsdPlugin.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -694,22 +721,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
-      <Project>{C1AECCF1-7F37-07B6-BAED-2F13350747C8}</Project>
-      <Name>Unity.2D.Psdimporter.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="core.csproj">
-      <Project>{50304434-9798-0CA7-F9B7-715628074633}</Project>
-      <Name>core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TexturePacker.Editor.csproj">
-      <Project>{C8794BBE-4BE2-4B46-7893-62A4FBDAA5A3}</Project>
-      <Name>Unity.TexturePacker.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TexturePacker.csproj">
-      <Project>{4F825264-A4AE-7AD3-E41B-EB1651E909B0}</Project>
-      <Name>Unity.TexturePacker</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{B1B141BC-D1C8-BD39-AC97-A4CA6617EF42}</Project>
       <Name>UnityEditor.UI</Name>

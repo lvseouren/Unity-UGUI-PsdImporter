@@ -192,6 +192,12 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 var texture = node.Value.image.texture;
                 if(texture)
                 {
+                    if(node.Value.image.Name.Contains("common_control_btn_yjbgbig"))
+                        MyPsdImportUtility.Instance.TestTextureCoordinates(texture);
+                    //calculate 9slice info
+                    var rectInfo = MyPsdImportUtility.Instance.Calculate9SliceInfo(texture);
+                    texture = MyPsdImportUtility.Instance.Get9SliceTexture(texture, rectInfo);
+                    node.Value.image.texture = texture;
                     // Need to load the image first
                     byte[] buf = EncordToPng(texture);
                     bool isTexture = node.Value.image.IsTexture();
@@ -203,6 +209,15 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     //if (!File.Exists(path))
                     {
                         File.WriteAllBytes(path, buf);
+                    }
+
+                    //if is 9 slice image, set border setting
+                    if (rectInfo.x >= 0)
+                    {
+                        TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+                        importer.spriteBorder = rectInfo;
+                        importer.SaveAndReimport();
+                        node.Value.image.isSliceImage = true;
                     }
                 }
             }

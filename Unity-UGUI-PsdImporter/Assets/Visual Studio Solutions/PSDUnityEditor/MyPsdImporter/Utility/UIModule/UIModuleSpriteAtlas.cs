@@ -38,8 +38,8 @@ namespace PG
              
             callback?.Invoke("Packing UI SpriteAtlas...", 1);
             TPGenerator.PackTextures(spriteAtlas);
-            AssetDatabase.Refresh();
             spriteAtlas.RefreshDict();
+            AssetDatabase.Refresh();
         }
 
         public static void ModifySpritePivot(string path)
