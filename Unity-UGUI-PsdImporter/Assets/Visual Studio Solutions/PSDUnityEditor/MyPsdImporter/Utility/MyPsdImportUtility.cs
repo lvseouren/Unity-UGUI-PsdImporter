@@ -14,9 +14,9 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         public int right;
         public int height;
         public int bottom;
-        public byte color;
+        public Color color;
 
-        public void Init(int bot, int hgt, byte clr)
+        public void Init(int bot, int hgt, Color clr)
         {
             bottom = bot;
             height = hgt;
@@ -56,7 +56,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         Texture2D texture;
         NativeArray<byte> textureData;
         int width, height;
-        Vector4 rectInfo;
+        Vector4 rectInfo;//x:left,y:right,z:bottom,w:top
         int threshold = 500;
         void InitRectInfo()
         {
@@ -96,18 +96,18 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 List<TexRect> heights = new List<TexRect>(width);
                 for(int col = 0;col<width;++col)
                 {
-                    for(int row = startRow;row<height-startRow;++row)
+                    for(int raw = startRow;raw<height-startRow;++raw)
                     {
                         TexRect texRect;
-                        if (row == startRow)
+                        if (raw == startRow)
                         {
                             texRect = new TexRect();
-                            texRect.Init(startRow, 1, GetTextureDataByRawAndCol(col, row));
+                            texRect.Init(startRow, 1, GetTextureDataByRawAndCol(raw, col));
                             heights.Add(texRect);
                         }else
                         {
                             texRect = heights[col];
-                            var color = GetTextureDataByRawAndCol(col, row);
+                            var color = GetTextureDataByRawAndCol(raw, col);
                             if (color.Equals(texRect.color))
                             {
                                 texRect.height++;
@@ -118,12 +118,14 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                         }
                     }
                 }
-                largestRectArea(heights);
+                var maxHeight = largestRectArea(heights);
+                startRow += maxHeight;
             }
         }
 
-        void largestRectArea(List<TexRect> heights)
+        int largestRectArea(List<TexRect> heights)
         {
+            int maxHeight = 0;
             int n = heights.Count;
             Stack<int> mono_stack = new Stack<int>();
             for (int i = 0; i < n; ++i)
@@ -154,8 +156,10 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     maxArea = heights[i].GetArea();
                     rectInfo = heights[i].GetRectInfo();
                 }
+                maxHeight = Math.Max(maxHeight, heights[i].height - 1);
                 i = heights[i].right;
             }
+            return maxHeight;
         }
 
         //O(n)时间复杂度
@@ -167,33 +171,45 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             int left = (int)rect.x;
             int right = (int)rect.y;
             int bottom = (int)rect.z;
-            int top = bottom + rectInfo.height-1;
-            var rectColor = GetTextureDataByRawAndCol(left, bottom);
-            for (int i = left; i <= right; ++i)
-                for (int j = bottom; j <= top; ++j)
-                    if (!GetTextureDataByRawAndCol(i, j).Equals(rectColor))
+            int top = (int)rect.w;
+            var compareColor = GetTextureDataByRawAndCol(bottom, left);
+            for (int col = left; col <= right; ++col)
+                for (int raw = bottom; raw <= top; ++raw)
+                    if (!GetTextureDataByRawAndCol(raw, col).Equals(compareColor))
                         return false;
-            
+
             //top
             for (int row = top + 1; row < texture.height; ++row)
+            {
+                compareColor = GetTextureDataByRawAndCol(row, left);
                 for (int col = left; col <= right; ++col)
-                    if (!texture.GetPixel(row, col).Equals(texture.GetPixel(row, left)))
+                    if (!GetTextureDataByRawAndCol(row, col).Equals(compareColor))
                         return false;
+            }
             //bottom
             for (int row = 0; row < bottom; ++row)
+            {
+                compareColor = GetTextureDataByRawAndCol(row, left);
                 for (int col = left; col <= right; ++col)
-                    if (!texture.GetPixel(row, col).Equals(texture.GetPixel(row, left)))
+                    if (!GetTextureDataByRawAndCol(row, col).Equals(compareColor))
                         return false;
+            }
             //left
             for (int col = 0; col < left; ++col)
+            {
+                compareColor = GetTextureDataByRawAndCol(bottom, col);
                 for (int row = bottom; row <= top; ++row)
-                    if (!texture.GetPixel(row, col).Equals(texture.GetPixel(bottom, col)))
+                    if (!GetTextureDataByRawAndCol(row, col).Equals(compareColor))
                         return false;
+            }
             //right
             for (int col = right+1; col < texture.width; ++col)
+            {
+                compareColor = GetTextureDataByRawAndCol(bottom, col);
                 for (int row = bottom; row <= top; ++row)
-                    if (!texture.GetPixel(row, col).Equals(texture.GetPixel(bottom, col)))
+                    if (!GetTextureDataByRawAndCol(row, col).Equals(compareColor))
                         return false;
+            }
             return true;
         }
 
@@ -210,13 +226,73 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         internal Texture2D Get9SliceTexture(Texture2D texture, Vector4 rectInfo)
         {
-            Debug.Log("left="+rectInfo.x+",right="+rectInfo.y);
+            Debug.Log("left="+rectInfo.x+",right="+rectInfo.y+ "bottom=" + rectInfo.z + ",top=" + rectInfo.w);
+            int left = (int)rectInfo.x;
+            if (left == 0)
+                left += 2;
+
+            var rawData = texture.GetPixels32();
+            if(left >= 0)
+            {
+                int right = (int)rectInfo.y;
+                if (right == texture.width - 1)
+                    right -= 2;
+                right = Math.Max(right, left);
+
+                int bottom = (int)rectInfo.z;
+                int top = (int)rectInfo.w;
+
+                int width = right - left + 1;
+                width = texture.width - width + 1;
+                int height = top - bottom + 1;
+                height = texture.height - height + 1;
+                Texture2D ret = new Texture2D(width, height);
+                Color32[] pixels = new Color32[width*height];
+                for(int row = 0;row<texture.height;++row)
+                    for(int col = 0;col<texture.width;++col)
+                    {
+                        int convertRow = row;
+                        if(col<=left)
+                        {
+                            int convertCol = col;
+                            if (row <= bottom)
+                            {
+                                var color = rawData[row * texture.width + col];
+                                pixels[convertRow * width + convertCol] = color;
+                            }
+                            else if (row > top)
+                            {
+                                convertRow = row - (top - bottom);
+                                var color = rawData[row * texture.width + col];
+                                pixels[convertRow * width + convertCol] = color;
+                            }
+                        }else if(col>right)
+                        {
+                            int convertCol = col-(right-left);
+                            if (row <= bottom)
+                            {
+                                var color = rawData[row * texture.width + col];
+                                pixels[convertRow * width + convertCol] = color;
+                            }
+                            else if (row > top)
+                            {
+                                convertRow = row - (top - bottom);
+                                var color = rawData[row * texture.width + col];
+                                pixels[convertRow * width + convertCol] = color;
+                            }
+                        }
+                    }
+
+                ret.SetPixels32(pixels);
+                ret.Apply();
+                return ret;
+            }
             return texture;
         }
 
-        byte GetTextureDataByRawAndCol(int row, int col)
+        Color GetTextureDataByRawAndCol(int row, int col)
         {
-            return textureData[row * width + col];
+            return texture.GetPixel(col, row);
         }
     }
 }

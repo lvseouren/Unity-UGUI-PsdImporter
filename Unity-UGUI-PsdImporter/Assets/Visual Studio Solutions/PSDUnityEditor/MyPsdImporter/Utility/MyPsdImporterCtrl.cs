@@ -215,9 +215,12 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     if (rectInfo.x >= 0)
                     {
                         TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
-                        importer.spriteBorder = rectInfo;
-                        importer.SaveAndReimport();
-                        node.Value.image.isSliceImage = true;
+                        if (importer)
+                        {
+                            importer.spriteBorder = rectInfo;
+                            importer.SaveAndReimport();
+                            node.Value.image.isSliceImage = true;
+                        }
                     }
                 }
             }
