@@ -96,18 +96,18 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 List<TexRect> heights = new List<TexRect>(width);
                 for(int col = 0;col<width;++col)
                 {
-                    for(int raw = startRow;raw<height-startRow;++raw)
+                    for(int row = startRow;row<height;++row)
                     {
                         TexRect texRect;
-                        if (raw == startRow)
+                        if (row == startRow)
                         {
                             texRect = new TexRect();
-                            texRect.Init(startRow, 1, GetTextureDataByRawAndCol(raw, col));
+                            texRect.Init(startRow, 1, GetTextureDataByRawAndCol(row, col));
                             heights.Add(texRect);
                         }else
                         {
                             texRect = heights[col];
-                            var color = GetTextureDataByRawAndCol(raw, col);
+                            var color = GetTextureDataByRawAndCol(row, col);
                             if (color.Equals(texRect.color))
                             {
                                 texRect.height++;
@@ -148,6 +148,13 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 heights[i] = rectInfo;
                 mono_stack.Push(i);
             }
+            for(int i = 0;i<n;++i)
+            {
+                var rectInfo = heights[i];
+                rectInfo.left = Math.Max(rectInfo.left, i);
+                rectInfo.right = Math.Min(rectInfo.right, width - i);
+                heights[i] = rectInfo;
+            }
             int maxArea = 0;
             for(int i = 0;i<n;++i)
             {
@@ -155,9 +162,9 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 {
                     maxArea = heights[i].GetArea();
                     rectInfo = heights[i].GetRectInfo();
+                    //maxHeight = Math.Max(maxHeight, heights[i].height - 1);
+                    i = heights[i].right;
                 }
-                maxHeight = Math.Max(maxHeight, heights[i].height - 1);
-                i = heights[i].right;
             }
             return maxHeight;
         }
@@ -165,7 +172,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         //O(n)时间复杂度
         bool Validate9Slice(TexRect rectInfo)
         {
-            if (rectInfo.height == 1)
+            if (rectInfo.height == 1||rectInfo.right<=rectInfo.left)
                 return false;
             var rect = rectInfo.GetRectInfo();
             int left = (int)rect.x;
@@ -174,8 +181,8 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             int top = (int)rect.w;
             var compareColor = GetTextureDataByRawAndCol(bottom, left);
             for (int col = left; col <= right; ++col)
-                for (int raw = bottom; raw <= top; ++raw)
-                    if (!GetTextureDataByRawAndCol(raw, col).Equals(compareColor))
+                for (int row = bottom; row <= top; ++row)
+                    if (!GetTextureDataByRawAndCol(row, col).Equals(compareColor))
                         return false;
 
             //top
