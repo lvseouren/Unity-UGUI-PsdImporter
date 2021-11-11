@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fceebd6d8ddb8a443afd3abf7d0de317, type: 3}
+  m_Name: SpriteAtlas
+  m_EditorClassIdentifier: 
+  m_Tag: Assets/AssetBundles/UI/Modules/Login/SpriteAtlas.asset
+  m_Sprites:
+  - {fileID: -8666136691021213981, guid: 2bceacf36e849e34ca564591c74d6dc5, type: 3}
+  - {fileID: 3559373053709349260, guid: 2bceacf36e849e34ca564591c74d6dc5, type: 3}
+  - {fileID: -9075919214267260926, guid: 2bceacf36e849e34ca564591c74d6dc5, type: 3}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_FixedSize: {x: 0, y: 0}
+  m_SizeConstraints: 0
+  m_ForceSquared: 0
+  m_Algorithm: 1
+  m_Sorting: 0
+  m_SortingOrder: 0
+  m_HeuristicsMode: 0
+  m_PackMode: 2
+  m_AlignToGrid: 1
+  m_TrimMode: 0
+  m_TrimMargin: 1
+  m_AlphaThreshold: 1
+  m_TracerTolerance: 200
+  m_Extrude: 1
+  m_BorderPadding: 0
+  m_ShapePadding: 0
+  m_FormatMaxSize: 2048
+  m_Objects:
+  - {fileID: 102900000, guid: b3d4e19a38a07924fbb8a68161332793, type: 3}

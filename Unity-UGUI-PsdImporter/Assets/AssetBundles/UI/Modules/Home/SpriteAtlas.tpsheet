@@ -4,34 +4,12 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:877a2a98b60fd9d97954f64392a8fc8c:6f62695f2acfe1b700ce2757eb55986e:ec3fb199b0508cab7b84c5248fec6def$
+# $TexturePacker:SmartUpdate:848fbc79330f076c08a0ac0245ca2214:3025a15f2740e8de5b3f2aff3ff29a6c:ec3fb199b0508cab7b84c5248fec6def$
 #
 :format=40300
 :texture=SpriteAtlas.png
-:size=1024x512
+:size=32x32
 :pivotpoints=enabled
 :borders=enabled
 
-common_btnt_big_og;753;373;212;76; 0.5;0.5; 0;0;0;0
-common_control_btn_yjbgbig;577;220;127;62; 0.5;0.5; 0;0;0;0
-common_control_returnt_icon;577;129;89;89; 0.5;0.5; 0;0;0;0
-common_head_bg_9S;1;370;748;49; 0.5;0.5; 0;0;0;0
-common_head_icon_bs;815;337;34;34; 0.5;0.5; 0;0;0;0
-common_head_icon_jb;706;241;37;41; 0.5;0.5; 0;0;0;0
-common_head_icon_ks;613;99;31;28; 0.5;0.5; 0;0;0;0
-common_head_icon_ls;668;185;25;33; 0.5;0.5; 0;0;0;0
-common_head_icon_mt;851;342;27;29; 0.5;0.5; 0;0;0;0
-common_head_icon_st;266;45;23;32; 0.5;0.5; 0;0;0;0
-common_head_picx;668;140;6;43; 0.5;0.5; 0;0;0;0
-common_head_zjbg;577;93;34;34; 0.5;0.5; 0;0;0;0
-common_head_zjicon;292;58;25;25; 0.5;0.5; 0;0;0;0
-common_pic_popt_title_zsa;880;351;26;20; 0.5;0.5; 0;0;0;0
-common_titlebg_bk;577;284;175;37; 0.5;0.5; 0;0;0;0
-common_titlebg_bubig;577;323;236;45; 0.5;0.5; 0;0;0;0
-common_titlet_picbg_LeftHalf;1;421;750;90; 0.5;0.5; 0;0;0;0
-lcuk_icon_cj;967;404;46;45; 0.5;0.5; 0;0;0;0
-luck_bottom_gjcj;292;85;283;283; 0.5;0.5; 0;0;0;0
-luck_bottom_ptcj;1;79;289;289; 0.5;0.5; 0;0;0;0
-luck_icon_zssp;754;288;33;33; 0.5;0.5; 0;0;0;0
-luck_titlebg_gj_LeftHalf;753;451;263;60; 0.5;0.5; 0;0;0;0
-luck_titlebg_pt_LeftHalf;1;17;263;60; 0.5;0.5; 0;0;0;0
+TestGlobalTag_9S;1;15;28;16; 0.5;0.5; 14;14;53;702

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,10 +53,14 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleScrollRectCanvasChecker.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\MyPsdImporterCtrl.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\PrefabProcessTools.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\TextureFormatUtility.cs" />
+    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\MyPsdImportUtility.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleSpriteAtlas.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleCanvas.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\FindTightRectJob.cs" />
@@ -74,7 +78,6 @@
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleSwitchPrefabSprite.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\UIModule\UIModuleAnimatorChecker.cs" />
     <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\LayerImport\EmptyImport.cs" />
-    <Compile Include="Assets\Visual Studio Solutions\PSDUnityEditor\MyPsdImporter\Utility\MyPsdImportUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Visual Studio Solutions\PSDUnityEditor\NewAssembly.asmdef" />
@@ -692,12 +695,23 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>D:\Program Files\Unity2019.3.0f1\Editor\2020.3.19f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
-      <Project>{C1AECCF1-7F37-07B6-BAED-2F13350747C8}</Project>
-      <Name>Unity.2D.Psdimporter.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="core.csproj">
       <Project>{50304434-9798-0CA7-F9B7-715628074633}</Project>
       <Name>core</Name>
@@ -709,22 +723,6 @@
     <ProjectReference Include="Unity.TexturePacker.csproj">
       <Project>{4F825264-A4AE-7AD3-E41B-EB1651E909B0}</Project>
       <Name>Unity.TexturePacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{B1B141BC-D1C8-BD39-AC97-A4CA6617EF42}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{32518143-A549-7CF1-EEFB-9F963C757BC7}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3F64639C-FF74-1A23-83CD-0BC273A0C0DB}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{90DA36F7-58D0-E9FE-67F9-7E9B723DBFE6}</Project>
-      <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -90,6 +90,7 @@ tpsheetFileNames:
 - Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Castle/CastleAtlas.tpsheet
 - Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Main/MainAtlas.tpsheet
 - Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Rally/RallyAtlas.tpsheet
+- Assets/AssetBundles/UI/Modules/Login/SpriteAtlas.tpsheet
 - Assets/AssetBundles/UI/Modules/Login2/Login2Atlas.tpsheet
 - Assets/AssetBundles/UI/Modules/Lottery/LotteryAtlas.tpsheet
 - Assets/AssetBundles/UI/Modules/Mail/SpriteAtlas/HeroDetails/HeroDetailsAtlas.tpsheet
@@ -206,6 +207,7 @@ textureFileNames:
 - Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Castle/CastleAtlas.png
 - Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Main/MainAtlas.png
 - Assets/AssetBundles/UI/Modules/League/SpriteAtlas/Rally/RallyAtlas.png
+- Assets/AssetBundles/UI/Modules/Login/SpriteAtlas.png
 - Assets/AssetBundles/UI/Modules/Login2/Login2Atlas.png
 - Assets/AssetBundles/UI/Modules/Lottery/LotteryAtlas.png
 - Assets/AssetBundles/UI/Modules/Mail/SpriteAtlas/HeroDetails/HeroDetailsAtlas.png
@@ -233,6 +235,7 @@ textureFileNames:
 - Assets/AssetBundles/UI/Modules/WorldTrend/WorldTrendAtlas.png
 - Assets/AssetBundles/UI/Widgets/ChestPanel/ChestPanelAtlas.png
 normalmapFileNames:
+- 
 - 
 - 
 - 
