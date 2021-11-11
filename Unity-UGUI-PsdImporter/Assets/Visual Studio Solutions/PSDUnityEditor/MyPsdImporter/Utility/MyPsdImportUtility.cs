@@ -363,10 +363,9 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             ret.Apply();
 
             //update rectinfo as border
-            int leftBorder = left;
-            rect.x = leftBorder;
+            rect.x = left;
             rect.y = 0;
-            rect.z = leftBorder;
+            rect.z = tex.width - right;
             rect.w = 0;
 
             return ret;
@@ -374,7 +373,42 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
         Texture2D GetSliceTexture_Vertical(Texture2D tex, ref RectInfo rect)
         {
-            return tex;
+            var rawData = texture.GetPixels32();
+            int bottom = rect.z;
+            int top = rect.w;
+
+            int width = tex.width;
+            int height = top - bottom + 1;
+            height = tex.height - height + 2;
+
+            Texture2D ret = new Texture2D(width, height);
+            Color32[] pixels = new Color32[width * height];
+            for (int col = 0; col < tex.width; ++col)
+                for (int row = 0; row < tex.height; ++row)
+                {
+                    int convertCol = col;
+                    if (row <= bottom + 1)
+                    {
+                        pixels[row * width + convertCol] = rawData[row * tex.width + col];
+                    }
+                    else if (col <= top)
+                    { }
+                    else
+                    {
+                        convertCol = col - (top-bottom) + 1;
+                        pixels[row * width + convertCol] = rawData[row * tex.width + col];
+                    }
+                }
+            ret.SetPixels32(pixels);
+            ret.Apply();
+
+            //update rectinfo as border
+            rect.x = 0;
+            rect.y = bottom;
+            rect.z = 0;
+            rect.w = tex.height-top;
+
+            return ret;
         }
 
         Texture2D GetSliceTexture_NineSlice(Texture2D tex, ref RectInfo rect)
