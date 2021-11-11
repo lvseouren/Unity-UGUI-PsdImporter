@@ -321,11 +321,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 switch (sliceType)
                 {
                     case SliceType.NineSlice:
-                        return GetSliceTexture_NineSlice(tex, rect);
+                        return GetSliceTexture_NineSlice(tex, ref rect);
                     case SliceType.Horizontal_3slice:
                         return Get3SliceTexture_Horizontal(tex, ref rect);
                     case SliceType.Vertical_3slice:
-                        return GetSliceTexture_Vertical(tex, rect);
+                        return GetSliceTexture_Vertical(tex, ref rect);
                 }
             }
             return tex;
@@ -338,7 +338,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             int right = rect.y;
 
             int width = right - left + 1;
-            width = tex.width - width + 1;
+            width = tex.width - width + 2;
             int height = tex.height;
 
             Texture2D ret = new Texture2D(width, height);
@@ -347,7 +347,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 for(int col = 0;col<tex.width;++col)
                 {
                     int convertCol = col;
-                    if (col <= left)
+                    if (col <= left+1)
                     {
                         pixels[row * width + convertCol] = rawData[row * tex.width + col];
                     }
@@ -355,7 +355,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     { }
                     else 
                     {
-                        convertCol = col - (right - left + 1);
+                        convertCol = col - (right - left)+1;
                         pixels[row * width + convertCol] = rawData[row * tex.width + col];
                     }
                 }
@@ -363,20 +363,21 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             ret.Apply();
 
             //update rectinfo as border
-            rect.x = left;
+            int leftBorder = left;
+            rect.x = leftBorder;
             rect.y = 0;
-            rect.z = left;
+            rect.z = leftBorder;
             rect.w = 0;
 
             return ret;
         }
 
-        Texture2D GetSliceTexture_Vertical(Texture2D tex, RectInfo rect)
+        Texture2D GetSliceTexture_Vertical(Texture2D tex, ref RectInfo rect)
         {
             return tex;
         }
 
-        Texture2D GetSliceTexture_NineSlice(Texture2D tex, RectInfo rect)
+        Texture2D GetSliceTexture_NineSlice(Texture2D tex, ref RectInfo rect)
         {
             var rawData = texture.GetPixels32();
             int left = rect.x;
@@ -385,9 +386,9 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             int top = rect.w;
 
             int width = right - left + 1;
-            width = tex.width - width + 1;
+            width = tex.width - width + 2;
             int height = top - bottom + 1;
-            height = tex.height - height + 1;
+            height = tex.height - height + 2;
 
             Texture2D ret = new Texture2D(width, height);
             Color32[] pixels = new Color32[width * height];
@@ -395,32 +396,32 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 for (int col = 0; col < tex.width; ++col)
                 {
                     int convertRow = row;
-                    if (col <= left)
+                    if (col <= left + 1)
                     {
                         int convertCol = col;
-                        if (row <= bottom)
+                        if (row <= bottom + 1)
                         {
                             var color = rawData[row * tex.width + col];
                             pixels[convertRow * width + convertCol] = color;
                         }
                         else if (row > top)
                         {
-                            convertRow = row - (top - bottom);
+                            convertRow = row - (top - bottom) + 1;
                             var color = rawData[row * tex.width + col];
                             pixels[convertRow * width + convertCol] = color;
                         }
                     }
                     else if (col > right)
                     {
-                        int convertCol = col - (right - left);
-                        if (row <= bottom)
+                        int convertCol = col - (right - left) + 1;
+                        if (row <= bottom + 1)
                         {
                             var color = rawData[row * tex.width + col];
                             pixels[convertRow * width + convertCol] = color;
                         }
                         else if (row > top)
                         {
-                            convertRow = row - (top - bottom);
+                            convertRow = row - (top - bottom) + 1;
                             var color = rawData[row * tex.width + col];
                             pixels[convertRow * width + convertCol] = color;
                         }
@@ -429,6 +430,14 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
 
             ret.SetPixels32(pixels);
             ret.Apply();
+
+            //update rectinfo as border
+            rect.x = left;
+            int rightBorder = tex.width - right;
+            rect.z = rightBorder;
+            rect.y = bottom;
+            int topBorder = tex.height - top;
+            rect.w = topBorder;
             return ret;
         }
 
