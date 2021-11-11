@@ -308,7 +308,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             //    Debug.Log("texture travel y,x=0:" + texture.GetPixel(0, i));
         }
 
-        internal Texture2D Get9SliceTexture(Texture2D tex, RectInfo rect)
+        internal Texture2D Get9SliceTexture(Texture2D tex, ref RectInfo rect)
         {
             Debug.Log("left="+rectInfo.x+",right="+rectInfo.y+ "bottom=" + rectInfo.z + ",top=" + rectInfo.w);
 
@@ -323,7 +323,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     case SliceType.NineSlice:
                         return GetSliceTexture_NineSlice(tex, rect);
                     case SliceType.Horizontal_3slice:
-                        return Get3SliceTexture_Horizontal(tex, rect);
+                        return Get3SliceTexture_Horizontal(tex, ref rect);
                     case SliceType.Vertical_3slice:
                         return GetSliceTexture_Vertical(tex, rect);
                 }
@@ -331,7 +331,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             return tex;
         }
 
-        Texture2D Get3SliceTexture_Horizontal(Texture2D tex, RectInfo rect)
+        Texture2D Get3SliceTexture_Horizontal(Texture2D tex, ref RectInfo rect)
         {
             var rawData = texture.GetPixels32();
             int left = rect.x;
@@ -361,6 +361,13 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 }
             ret.SetPixels32(pixels);
             ret.Apply();
+
+            //update rectinfo as border
+            rect.x = left;
+            rect.y = 0;
+            rect.z = left;
+            rect.w = 0;
+
             return ret;
         }
 
@@ -428,6 +435,16 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         Color GetTexturePixelDataByRawAndCol(int row, int col)
         {
             return texture.GetPixel(col, row);
+        }
+
+        public Vector4 GetSpriteBorder(Texture2D tex, RectInfo rectInfo)
+        {
+            Vector4 border = Vector4.zero;
+            border.x = rectInfo.x;
+            border.y = rectInfo.y;
+            border.z = rectInfo.z;
+            border.w = rectInfo.w;
+            return border;
         }
     }
 }

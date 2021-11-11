@@ -196,7 +196,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                         MyPsdImportUtility.Instance.TestTextureCoordinates(texture);
                     //calculate 9slice info
                     var rectInfo = MyPsdImportUtility.Instance.Calculate9SliceInfo(texture);
-                    texture = MyPsdImportUtility.Instance.Get9SliceTexture(texture, rectInfo);
+                    texture = MyPsdImportUtility.Instance.Get9SliceTexture(texture, ref rectInfo);
                     node.Value.image.texture = texture;
                     // Need to load the image first
                     byte[] buf = EncordToPng(texture);
@@ -217,6 +217,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                         TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
                         if (importer)
                         {
+                            //var border = MyPsdImportUtility.Instance.GetSpriteBorder(texture, rectInfo);
                             importer.spriteBorder = rectInfo;
                             importer.SaveAndReimport();
                             node.Value.image.isSliceImage = true;
@@ -514,6 +515,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             {
                 case ImgType.Image:
                     ((UnityEngine.UI.Image)graph).sprite = image.sprite;
+                    ((UnityEngine.UI.Image)graph).type = image.isSliceImage ? UnityEngine.UI.Image.Type.Sliced : UnityEngine.UI.Image.Type.Simple;
                     break;
                 case ImgType.Texture:
                     ((UnityEngine.UI.RawImage)graph).texture = image.texture;
@@ -525,6 +527,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     break;
                 case ImgType.AtlasImage:
                     ((UnityEngine.UI.Image)graph).sprite = image.sprite;
+                    ((UnityEngine.UI.Image)graph).type = image.isSliceImage ? UnityEngine.UI.Image.Type.Sliced : UnityEngine.UI.Image.Type.Simple;
                     break;
                 default:
                     break;
