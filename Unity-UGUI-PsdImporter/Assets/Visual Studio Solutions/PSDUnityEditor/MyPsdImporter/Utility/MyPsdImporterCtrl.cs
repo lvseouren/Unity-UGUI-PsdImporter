@@ -210,7 +210,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     {
                         File.WriteAllBytes(path, buf);
                     }
-
+                    AssetDatabase.Refresh();
                     //if is 9 slice image, set border setting
                     if (rectInfo.x >= 0)
                     {
