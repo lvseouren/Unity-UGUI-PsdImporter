@@ -52,7 +52,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         int texWidth, texHeight;
         RectInfo rectInfo;//x:left,y:right,z:bottom,w:top
         
-        int threshold_slice = 50;
+        int threshold_slice = 30;
         SliceType sliceType;
         //horizontal 3 slice
         int slice_left, slice_right;
@@ -193,10 +193,10 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
         //O(n)时间复杂度
         bool Validate9Slice(RectInfo rect)
         {
-            int left = (int)rect.x;
-            int right = (int)rect.y;
-            int bottom = (int)rect.z;
-            int top = (int)rect.w;
+            int left = rect.x;
+            int right = rect.y;
+            int bottom = rect.z;
+            int top = rect.w;
 
             Color compareColor;
             //top
@@ -212,8 +212,11 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             {
                 compareColor = GetTexturePixelDataByRawAndCol(row, left);
                 for (int col = left; col <= right; ++col)
-                    if (!GetTexturePixelDataByRawAndCol(row, col).Equals(compareColor))
+                {
+                    var color = GetTexturePixelDataByRawAndCol(row, col);
+                    if (!color.Equals(compareColor))
                         return false;
+                }
             }
             
             //left
@@ -245,7 +248,8 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 var anchordColor = GetTexturePixelDataByRawAndCol(row, left);
                 while(left>0)
                 {
-                    if (GetTexturePixelDataByRawAndCol(row, left).Equals(anchordColor))
+                    var color = GetTexturePixelDataByRawAndCol(row, left);
+                    if (color.Equals(anchordColor))
                         left--;
                     else
                         break;
@@ -257,8 +261,8 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     else
                         break;
                 }
-                leftArr.Add(left);
-                rightArr.Add(right);
+                leftArr.Add(left+1);
+                rightArr.Add(right-1);
             }
             slice_left = leftArr.Max();
             slice_right = rightArr.Min();
@@ -286,8 +290,8 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                     else
                         break;
                 }
-                bottomArr.Add(bottom);
-                topArr.Add(top);
+                bottomArr.Add(bottom+1);
+                topArr.Add(top-1);
             }
             slice_bottom = bottomArr.Max();
             slice_top = topArr.Min();
@@ -332,8 +336,6 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
             var rawData = texture.GetPixels32();
             int left = rect.x;
             int right = rect.y;
-            int bottom = rect.z;
-            int top = rect.w;
 
             int width = right - left + 1;
             width = tex.width - width + 1;
@@ -350,7 +352,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                         pixels[row * width + convertCol] = rawData[row * tex.width + col];
                     }
                     else if (col <= right)
-                        ;
+                    { }
                     else 
                     {
                         convertCol = col - (right - left + 1);
