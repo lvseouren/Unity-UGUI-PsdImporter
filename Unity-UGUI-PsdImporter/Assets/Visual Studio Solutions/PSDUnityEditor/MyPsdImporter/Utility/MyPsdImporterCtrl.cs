@@ -192,7 +192,7 @@ namespace Assets.Visual_Studio_Solutions.PSDUnityEditor.MyPsdImporter
                 var texture = node.Value.image.texture;
                 if(texture)
                 {
-                    if(node.Value.image.Name.Contains("common_control_btn_yjbgbig"))
+                    if(node.Value.image.Name.Contains("login_bart_Bg")||string.IsNullOrEmpty(node.Value.image.Name))
                         MyPsdImportUtility.Instance.TestTextureCoordinates(texture);
                     //calculate 9slice info
                     var rectInfo = MyPsdImportUtility.Instance.Calculate9SliceInfo(texture);
